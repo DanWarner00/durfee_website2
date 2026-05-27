@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About — Durfee Plumbing &amp; Heating</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Family-owned plumber & HVAC team on Cape Cod for 20+ years. MA Master Plumber, EPA 608, Mass Save certified.">
+<meta name="theme-color" content="#08090c">
+<link rel="stylesheet" href="lighthouse.css">
+<style>
+  .about-hero {
+    padding: 140px 0 40px;
+  }
+  .about-hero__grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  @media (max-width: 920px) { .about-hero__grid { grid-template-columns: 1fr; } }
+  .about-hero h1 {
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 24px;
+    max-width: 16ch;
+  }
+  .about-hero h1 .accent { color: var(--blue); }
+  .about-hero__lede {
+    font-size: clamp(18px, 1.8vw, 21px);
+    color: var(--ink-2);
+    line-height: 1.55;
+    margin: 0 0 20px;
+    max-width: 52ch;
+  }
+  .about-hero__sub {
+    font-size: 16.5px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0 0 32px;
+    max-width: 52ch;
+  }
+
+  .about-hero__photo {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--card);
+  }
+  .about-hero__photo img {
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: 60% center;
+  }
+  .about-hero__photo figcaption {
+    position: absolute;
+    left: 24px; right: 24px; bottom: 24px;
+    padding: 14px 16px;
+    background: rgba(8,9,12,0.7);
+    backdrop-filter: blur(14px);
+    border-radius: 12px;
+    color: #fff;
+    display: flex; justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+  }
+  .about-hero__photo strong { font-weight: 500; }
+  .about-hero__photo small { color: rgba(255,255,255,0.6); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* credentials */
+  .creds-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 880px) { .creds-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .creds-grid { grid-template-columns: 1fr; } }
+  .cred {
+    padding: 28px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .cred__seal {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    display: grid; place-items: center;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border: 1px solid rgba(41,151,255,0.25);
+  }
+  .cred--green .cred__seal { background: var(--green-soft); color: var(--green); border-color: rgba(48,209,88,0.25); }
+  .cred h3 {
+    font-size: 17px; font-weight: 600;
+    color: #fff; margin: 0;
+    letter-spacing: -0.005em;
+  }
+  .cred p { color: var(--ink-2); font-size: 14px; line-height: 1.5; margin: 0; }
+
+  /* areas */
+  .area-grid {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  @media (max-width: 880px) { .area-grid { grid-template-columns: 1fr; } }
+  .area-list {
+    padding: 28px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    list-style: none;
+    margin: 0;
+  }
+  @media (max-width: 600px) { .area-list { grid-template-columns: repeat(2, 1fr); } }
+  .area-list li {
+    color: var(--ink-2);
+    font-size: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.005em;
+  }
+  .area-list .sep { color: var(--muted); }
+  .area-callout {
+    padding: 32px;
+    background: linear-gradient(180deg, var(--bg-3), var(--bg-2));
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .area-callout h3 { font-size: 16px; color: #fff; margin: 0; font-weight: 600; letter-spacing: -0.005em; }
+  .area-callout p { color: var(--ink-2); font-size: 14.5px; margin: 0; line-height: 1.55; }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html"><img src="../logo.png" alt=""><span>Durfee</span></a>
+    <div class="nav__links">
+      <a href="services.html">Services</a>
+      <a href="mass-save-rebates.html">Rebates</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="nav__cta" href="instant-quote.html">Get a quote</a>
+  </div>
+</nav>
+
+<!-- ABOUT HERO -->
+<section class="about-hero">
+  <div class="container">
+    <div class="page-hero__breadcrumb">
+      <a href="index.html">Home</a><span>›</span>About
+    </div>
+    <div class="about-hero__grid">
+      <div>
+        <div class="eyebrow">Family-owned · Cape Cod</div>
+        <h1>The shop the<br><span class="accent">owner answers.</span></h1>
+        <p class="about-hero__lede">
+          Phil Durfee started this shop after a decade running service for a larger company and getting tired of watching homeowners get up-sold. Today, Durfee Plumbing &amp; Heating is a small crew of licensed techs who actually answer the phone.
+        </p>
+        <p class="about-hero__sub">
+          Phil personally handles every service issue — if a job goes sideways, you talk to the owner, not a call center in another state. We're small on purpose. It's how we keep flat-rate pricing honest and the one-year warranty actually worth something.
+        </p>
+        <div class="page-hero__actions">
+          <a class="btn btn--primary" href="contact.html">Get in touch with Phil</a>
+          <a class="btn btn--ghost" href="tel:+15086193078">508-619-3078</a>
+        </div>
+      </div>
+      <figure class="about-hero__photo" style="margin:0">
+        <img src="../photos/phil-truck.jpg" alt="Phil Durfee, owner, on a Cape Cod job site">
+        <figcaption>
+          <span><strong>Phil Durfee</strong> · Owner</span>
+          <small>MA Master Plumber</small>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- STATS TICKER -->
+<section style="padding-top:40px;padding-bottom:80px">
+  <div class="container">
+    <div class="ticker">
+      <div>
+        <div class="ticker__num">20<sup>+ yrs</sup></div>
+        <div class="ticker__label">On Cape Cod</div>
+      </div>
+      <div>
+        <div class="ticker__num">~1<sup>hr</sup></div>
+        <div class="ticker__label">Avg. response</div>
+      </div>
+      <div>
+        <div class="ticker__num">17<sup>+</sup></div>
+        <div class="ticker__label">Towns served</div>
+      </div>
+      <div>
+        <div class="ticker__num">1<sup>yr</sup></div>
+        <div class="ticker__label">Warranty on every install</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow">Credentials</div>
+      <h2>Licensed, certified, <span class="soft">provable on paper.</span></h2>
+      <p>Ask any contractor for these before you let them touch your system. Ours are on file with the state and available on request.</p>
+    </div>
+
+    <div class="creds-grid">
+      <article class="cred">
+        <div class="cred__seal">MA</div>
+        <h3>Master Plumber license</h3>
+        <p>Massachusetts Board of State Examiners of Plumbers and Gas Fitters. License held by Phil Durfee.</p>
+      </article>
+      <article class="cred">
+        <div class="cred__seal">EPA</div>
+        <h3>EPA Section 608</h3>
+        <p>Universal refrigerant handling certification for heat pump and A/C installation, recovery, and service.</p>
+      </article>
+      <article class="cred cred--green">
+        <div class="cred__seal">MS</div>
+        <h3>Mass Save certified</h3>
+        <p>HEAT Loan-approved. We file the full rebate paperwork for qualifying heat-pump and water-heater work.</p>
+      </article>
+      <article class="cred">
+        <div class="cred__seal">INS</div>
+        <h3>Fully insured</h3>
+        <p>General liability and workers' compensation on every job. Certificate of insurance available on request.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- THE FLEET (visual moment) -->
+<section style="padding-top:0">
+  <div class="container">
+    <a class="photo-card" href="services.html" style="min-height:480px;display:block;text-decoration:none">
+      <div class="photo-card__bg"><img src="../photos/fleet-trucks.jpg" alt=""></div>
+      <div class="photo-card__body" style="min-height:480px">
+        <span class="photo-card__tag">The fleet</span>
+        <h3 style="font-size:clamp(32px,4.4vw,56px);max-width:14ch">Trucks roll daily from Dennis.</h3>
+        <p style="max-width:50ch">A small fleet, well-stocked. Most jobs get done in a single trip because the parts ride with the tech, not in a warehouse across town.</p>
+        <span class="arrow">See what we do</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow eyebrow--cyan">Where we work</div>
+      <h2>17+ Cape towns, <span class="soft">plus Plymouth &amp; Wareham.</span></h2>
+      <p>If you're inside this list, we're nearby. If you're not sure, call — we'll tell you straight whether we're a fit.</p>
+    </div>
+
+    <div class="area-grid">
+      <ul class="area-list">
+        <li>Barnstable</li><li>Bourne</li><li>Brewster</li><li>Chatham</li>
+        <li>Dennis</li><li>Eastham</li><li>Falmouth</li><li>Harwich</li>
+        <li>Mashpee</li><li>Orleans</li><li>Provincetown</li><li>Sandwich</li>
+        <li>Truro</li><li>Wellfleet</li><li>Yarmouth</li>
+        <li class="sep">·</li>
+        <li>Plymouth</li><li>Wareham</li>
+      </ul>
+      <div class="area-callout">
+        <h3>A note on emergencies</h3>
+        <p>Emergency service is dispatched closest-truck-first. If you're in a corner of the Cape, we'll be upfront about the ETA.</p>
+        <a class="btn btn--primary" href="contact.html" style="margin-top:6px;align-self:flex-start">Confirm we serve your town</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow">Reviews</div>
+      <h2>Words you can <span class="soft">call and verify.</span></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px">
+      <article class="review-tile">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Heat broke one cold, sleeting January night, owner came and fixed it even though he was sick with an earache. Can't recommend them highly enough."</blockquote>
+        <div class="who"><strong>Brigid F.</strong><span>Yelp</span></div>
+      </article>
+      <article class="review-tile">
+        <div class="stars">★★★★★</div>
+        <blockquote>"When my tank came in early they made a point of coming to my house before they were scheduled — unheard of on Cape Cod. Their price was very fair as well."</blockquote>
+        <div class="who"><strong>Mo D.</strong><span>Yelp</span></div>
+      </article>
+      <article class="review-tile">
+        <div class="stars">★★★★★</div>
+        <blockquote>"When I called Durfee's a few hours after the install because of a leaky vacuum valve, the guys came back within minutes and quickly replaced it. I would definitely use Durfee's again for any plumbing need."</blockquote>
+        <div class="who"><strong>Robert F.</strong><span>Yelp</span></div>
+      </article>
+      <article class="review-tile">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Phillip Durfee and every single one of his employees are excellent. Very prompt in responding and fixing the problems with our very old furnace and water heater."</blockquote>
+        <div class="who"><strong>T L.</strong><span>Yelp</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="text-align:center;padding:clamp(60px,8vw,100px) 0">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center">Ready when you are</div>
+    <h2 style="font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-0.025em;font-weight:600;color:#fff;margin:0 auto 18px;max-width:20ch">Got a leak, no heat, or a project to scope?</h2>
+    <p style="color:var(--ink-2);font-size:18px;margin:0 auto 32px;max-width:46ch;line-height:1.5">
+      Tell us the address, the symptom, and a callback number. We'll come back with a flat-rate quote.
+    </p>
+    <div style="display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a class="btn btn--primary" href="instant-quote.html" style="padding:16px 28px;font-size:17px">Get an instant quote</a>
+      <a class="btn btn--ghost" href="tel:+15086193078" style="padding:16px 28px;font-size:17px">508-619-3078</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../logo.png" alt=""><strong>Durfee Plumbing &amp; Heating</strong>
+        <span>22 Diamonds Path, Unit 7<br>Dennis, MA 02660<br>Mon–Fri 8a–4:30p</span>
+        <div class="footer__creds"><span>MA Master Plumber</span><span>EPA 608</span><span>Insured</span></div>
+      </div>
+      <div class="footer__col"><h4>Plumbing</h4><ul>
+        <li><a href="water-heater-installation.html">Water heaters</a></li>
+        <li><a href="tankless-water-heaters.html">Tankless</a></li>
+        <li><a href="drain-cleaning.html">Drain cleaning</a></li>
+        <li><a href="gas-line-installation.html">Gas lines</a></li>
+        <li><a href="plumbing-winterization.html">Winterization</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>HVAC</h4><ul>
+        <li><a href="heat-pump-installation.html">Heat pumps</a></li>
+        <li><a href="ductless-mini-split.html">Mini splits</a></li>
+        <li><a href="duct-cleaning.html">Duct cleaning</a></li>
+        <li><a href="mass-save-rebates.html">Mass Save</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Service area</h4><ul>
+        <li><a href="hyannis.html">Hyannis</a></li>
+        <li><a href="yarmouth.html">Yarmouth</a></li>
+        <li><a href="dennis.html">Dennis</a></li>
+        <li><a href="falmouth.html">Falmouth</a></li>
+        <li><a href="service-area.html">All towns</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Company</h4><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:+15086193078">508-619-3078</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2026 Durfee Plumbing &amp; Heating · MA Master Plumber · EPA 608 · Insured</div>
+      <div class="footer__social">
+        <a href="https://www.yelp.com/biz/durfee-plumbing-and-heating-dennis-3" target="_blank" rel="noopener" aria-label="Read our reviews on Yelp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M14.2 11.1l3.6-1.8c.7-.4 1.5.1 1.5.9V13c0 .8-.8 1.3-1.5.9l-3.6-1.8c-.7-.3-.7-1.3 0-1zm-.6 4l3.5 2.5c.6.5.5 1.5-.3 1.7l-2.5.9c-.8.3-1.6-.4-1.5-1.2l.2-3.4c.1-.7.9-1 1.6-.5zm-2.5-3.2l-1-5.6c-.1-.8-.9-1.3-1.7-1l-1.6.6c-.7.3-1 1.2-.6 1.9l2.7 4.9c.4.8 1.6.5 2.2-.8zm.3 1.7c.1.7-.7 1.2-1.4.9l-3.4-1.5c-.8-.3-.8-1.5 0-1.8l3.4-1.5c.7-.3 1.5.2 1.4.9z"/></svg>
+          <span>Yelp</span>
+        </a>
+        <a href="https://www.google.com/search?q=Durfee+Plumbing+%26+Heating+Dennis+MA" target="_blank" rel="noopener" aria-label="Read our reviews on Google">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.6z"/><path d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.7v2.7C4.4 19.8 7.9 22 12 22z" opacity=".85"/><path d="M6.2 13.6c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9V7.1H2.7C2 8.5 1.6 10.2 1.6 12s.4 3.5 1.1 4.9l3.5-2.7z" opacity=".7"/><path d="M12 5.8c1.5 0 2.9.5 4 1.5l3-3C17.2 2.6 14.8 1.6 12 1.6 7.9 1.6 4.4 3.8 2.7 7.1l3.5 2.7c.8-2.5 3.1-4 5.8-4z" opacity=".55"/></svg>
+          <span>Google</span>
+        </a>
+        <a href="https://www.facebook.com/durfeeplumbing/" target="_blank" rel="noopener" aria-label="Durfee Plumbing on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2.2-2H17V2.2C16.6 2.1 15.5 2 14.3 2 11.7 2 10 3.6 10 6.5V10H7v4h3v8h3z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

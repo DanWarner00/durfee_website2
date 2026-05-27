@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Plumber Yarmouth, MA — Durfee Plumbing &amp; Heating</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Licensed plumber and HVAC team in Yarmouth, MA. Fast response, flat-rate pricing, 1-year warranty. Call Durfee Plumbing at 508-619-3078.">
+<meta name="theme-color" content="#08090c">
+<link rel="stylesheet" href="lighthouse.css">
+
+<style>
+  .town-hero { padding: 140px 0 60px; position: relative; overflow: hidden; }
+  .town-hero__grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  @media (max-width: 920px) { .town-hero__grid { grid-template-columns: 1fr; } }
+  .town-hero h1 {
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 24px;
+    max-width: 14ch;
+  }
+  .town-hero h1 .accent { color: var(--blue); }
+  .town-hero__lede {
+    font-size: clamp(17px, 1.7vw, 20px);
+    color: var(--ink-2);
+    line-height: 1.55;
+    margin: 0 0 32px;
+    max-width: 52ch;
+  }
+  .town-hero__bullets {
+    list-style: none; padding: 0; margin: 32px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+  }
+  .town-hero__bullets li {
+    border-left: 2px solid var(--blue);
+    padding-left: 14px;
+  }
+  .town-hero__bullets strong { color: #fff; font-size: 15px; display: block; font-weight: 600; letter-spacing: -0.005em; }
+  .town-hero__bullets span { color: var(--muted); font-size: 13px; }
+  .town-hero__photo {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--card);
+  }
+  .town-hero__photo img { width: 100%; height: 100%; object-fit: cover; }
+  .town-hero__photo::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(8,9,12,0.6) 100%);
+  }
+  .town-hero__photo figcaption {
+    position: absolute; bottom: 20px; left: 20px; right: 20px;
+    color: #fff; font-size: 12.5px;
+    display: flex; justify-content: space-between;
+    letter-spacing: 0.04em;
+  }
+  .town-hero__photo strong { font-weight: 500; }
+  .town-hero__photo small { color: rgba(255,255,255,0.6); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .town-services {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .town-services a {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 24px;
+    padding: 22px 28px;
+    color: var(--ink);
+    border-top: 1px solid var(--line);
+    transition: background 150ms;
+  }
+  .town-services a:first-child { border-top: 0; }
+  .town-services a:hover { background: var(--card-hover); text-decoration: none; }
+  .town-services strong { display: block; color: #fff; font-size: 17px; font-weight: 600; letter-spacing: -0.005em; }
+  .town-services span.detail { color: var(--muted); font-size: 14px; margin-top: 2px; display: block; }
+  .town-services .chev { color: var(--blue); font-size: 20px; font-weight: 500; }
+
+  .town-trust {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: clamp(32px, 5vw, 56px);
+  }
+  @media (max-width: 880px) { .town-trust { grid-template-columns: 1fr; } }
+  .town-trust h2 {
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 18px;
+  }
+  .town-trust p { color: var(--ink-2); font-size: 16px; line-height: 1.55; margin: 0 0 24px; max-width: 50ch; }
+  .town-trust__list { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+  .town-trust__list li {
+    padding: 16px 18px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    display: flex; flex-direction: column;
+  }
+  .town-trust__list strong { font-size: 19px; color: #fff; font-weight: 600; letter-spacing: -0.01em; }
+  .town-trust__list span { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html"><img src="../logo.png" alt=""><span>Durfee</span></a>
+    <div class="nav__links">
+      <a href="services.html">Services</a>
+      <a href="mass-save-rebates.html">Rebates</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="nav__cta" href="instant-quote.html">Get a quote</a>
+  </div>
+</nav>
+
+<section class="town-hero">
+  <div class="container">
+    <div class="page-hero__breadcrumb">
+      <a href="index.html">Home</a><span>›</span><a href="service-area.html">Service area</a><span>›</span>Yarmouth
+    </div>
+    <div class="town-hero__grid">
+      <div>
+        <div class="eyebrow">02664 · Mid Cape</div>
+        <h1>Yarmouth.<br><span class="accent">On call.</span></h1>
+        <p class="town-hero__lede">Three village centers — South Yarmouth, West Yarmouth, and Yarmouth Port — with a mix of year-round and seasonal housing. Older homes need experienced hands.</p>
+        <div class="page-hero__actions">
+          <a class="btn btn--primary" href="instant-quote.html">Get a Yarmouth quote</a>
+          <a class="btn btn--ghost" href="tel:+15086193078">508-619-3078</a>
+        </div>
+        <ul class="town-hero__bullets">
+          <li><strong>Serving Yarmouth</strong><span>And surrounding Mid Cape</span></li>
+          <li><strong>~1-hour avg.</strong><span>Emergency response</span></li>
+          <li><strong>Master Plumber</strong><span>MA licensed · EPA 608</span></li>
+          <li><strong>Flat-rate</strong><span>Quoted before we start</span></li>
+        </ul>
+      </div>
+      <figure class="town-hero__photo" style="margin:0">
+        <img src="../photos/phil-truck.jpg" alt="Durfee truck on a Yarmouth job">
+        <figcaption>
+          <span><strong>Yarmouth, MA</strong></span>
+          <small>02664</small>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow">Services in Yarmouth</div>
+      <h2>Everything we do, <span class="soft">one crew.</span></h2>
+      <p>Same flat-rate quote, same one-year warranty — whether you need an emergency drain clear or a Mass Save heat-pump install.</p>
+    </div>
+
+    <div class="town-services">
+      <a href="heat-pump-installation.html"><div><strong>Heat pump installation</strong><span class="detail">Cold-climate, Mass Save eligible, EPA 608 certified</span></div><span class="chev">›</span></a>
+      <a href="ductless-mini-split.html"><div><strong>Ductless mini splits</strong><span class="detail">1–8 zone systems, quiet wall-mount heads</span></div><span class="chev">›</span></a>
+      <a href="water-heater-installation.html"><div><strong>Water heater installation</strong><span class="detail">Tank, tankless &amp; hybrid heat-pump — same-day available</span></div><span class="chev">›</span></a>
+      <a href="drain-cleaning.html"><div><strong>Drain cleaning</strong><span class="detail">Kitchen, bath &amp; main-line · camera-verified</span></div><span class="chev">›</span></a>
+      <a href="gas-line-installation.html"><div><strong>Gas line installation</strong><span class="detail">Stove, fireplace, grill, generator, heating</span></div><span class="chev">›</span></a>
+      <a href="plumbing-winterization.html"><div><strong>Plumbing winterization</strong><span class="detail">Seasonal homes, rentals &amp; spring re-opens</span></div><span class="chev">›</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="town-trust">
+      <div>
+        <div class="eyebrow eyebrow--cyan">Why Yarmouth homeowners pick Durfee</div>
+        <h2>A real Cape Cod plumber, <span class="soft">not a franchise.</span></h2>
+        <p>Three village centers — South Yarmouth, West Yarmouth, and Yarmouth Port — with a mix of year-round and seasonal housing. Older homes need experienced hands. We know the housing stock, the soil conditions, and the town permitting office personally. No call center in another state, no surprise add-ons.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn--primary" href="instant-quote.html">Get a quote</a>
+          <a class="btn btn--ghost" href="reviews.html">Read reviews</a>
+        </div>
+      </div>
+      <ul class="town-trust__list">
+        <li><strong>20+ yrs</strong><span>On Cape Cod</span></li>
+        <li><strong>5★ Yelp</strong><span>Read real reviews →</span></li>
+        <li><strong>1-yr warranty</strong><span>Parts &amp; labor on every install</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="text-align:center;padding:clamp(60px,8vw,100px) 0">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center">Yarmouth, MA</div>
+    <h2 style="font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-0.025em;font-weight:600;color:#fff;margin:0 auto 18px;max-width:18ch">Need a plumber today?</h2>
+    <p style="color:var(--ink-2);font-size:18px;margin:0 auto 32px;max-width:44ch;line-height:1.5">Call us, tell us the symptom, and we'll dispatch the closest truck — usually within an hour during business hours.</p>
+    <div style="display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a class="btn btn--warm" href="tel:+15086193078" style="padding:16px 28px;font-size:17px">Call 508-619-3078</a>
+      <a class="btn btn--ghost" href="instant-quote.html" style="padding:16px 28px;font-size:17px">Request a quote</a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../logo.png" alt=""><strong>Durfee Plumbing &amp; Heating</strong>
+        <span>22 Diamonds Path, Unit 7<br>Dennis, MA 02660<br>Mon–Fri 8a–4:30p</span>
+        <div class="footer__creds"><span>MA Master Plumber</span><span>EPA 608</span><span>Insured</span></div>
+      </div>
+      <div class="footer__col"><h4>Plumbing</h4><ul>
+        <li><a href="water-heater-installation.html">Water heaters</a></li>
+        <li><a href="tankless-water-heaters.html">Tankless</a></li>
+        <li><a href="drain-cleaning.html">Drain cleaning</a></li>
+        <li><a href="gas-line-installation.html">Gas lines</a></li>
+        <li><a href="plumbing-winterization.html">Winterization</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>HVAC</h4><ul>
+        <li><a href="heat-pump-installation.html">Heat pumps</a></li>
+        <li><a href="ductless-mini-split.html">Mini splits</a></li>
+        <li><a href="duct-cleaning.html">Duct cleaning</a></li>
+        <li><a href="mass-save-rebates.html">Mass Save</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Service area</h4><ul>
+        <li><a href="hyannis.html">Hyannis</a></li>
+        <li><a href="yarmouth.html">Yarmouth</a></li>
+        <li><a href="dennis.html">Dennis</a></li>
+        <li><a href="falmouth.html">Falmouth</a></li>
+        <li><a href="service-area.html">All towns</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Company</h4><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:+15086193078">508-619-3078</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2026 Durfee Plumbing &amp; Heating · MA Master Plumber · EPA 608 · Insured</div>
+      <div class="footer__social">
+        <a href="https://www.yelp.com/biz/durfee-plumbing-and-heating-dennis-3" target="_blank" rel="noopener" aria-label="Read our reviews on Yelp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M14.2 11.1l3.6-1.8c.7-.4 1.5.1 1.5.9V13c0 .8-.8 1.3-1.5.9l-3.6-1.8c-.7-.3-.7-1.3 0-1zm-.6 4l3.5 2.5c.6.5.5 1.5-.3 1.7l-2.5.9c-.8.3-1.6-.4-1.5-1.2l.2-3.4c.1-.7.9-1 1.6-.5zm-2.5-3.2l-1-5.6c-.1-.8-.9-1.3-1.7-1l-1.6.6c-.7.3-1 1.2-.6 1.9l2.7 4.9c.4.8 1.6.5 2.2-.8zm.3 1.7c.1.7-.7 1.2-1.4.9l-3.4-1.5c-.8-.3-.8-1.5 0-1.8l3.4-1.5c.7-.3 1.5.2 1.4.9z"/></svg>
+          <span>Yelp</span>
+        </a>
+        <a href="https://www.google.com/search?q=Durfee+Plumbing+%26+Heating+Dennis+MA" target="_blank" rel="noopener" aria-label="Read our reviews on Google">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.6z"/><path d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.7v2.7C4.4 19.8 7.9 22 12 22z" opacity=".85"/><path d="M6.2 13.6c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9V7.1H2.7C2 8.5 1.6 10.2 1.6 12s.4 3.5 1.1 4.9l3.5-2.7z" opacity=".7"/><path d="M12 5.8c1.5 0 2.9.5 4 1.5l3-3C17.2 2.6 14.8 1.6 12 1.6 7.9 1.6 4.4 3.8 2.7 7.1l3.5 2.7c.8-2.5 3.1-4 5.8-4z" opacity=".55"/></svg>
+          <span>Google</span>
+        </a>
+        <a href="https://www.facebook.com/durfeeplumbing/" target="_blank" rel="noopener" aria-label="Durfee Plumbing on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2.2-2H17V2.2C16.6 2.1 15.5 2 14.3 2 11.7 2 10 3.6 10 6.5V10H7v4h3v8h3z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

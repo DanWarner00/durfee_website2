@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Durfee Plumbing &amp; Heating — Cape Cod's plumber, on call.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cape Cod's family-owned plumber & HVAC team. Heat pumps, water heaters, gas lines. Flat-rate pricing, 1-year warranty, Mass Save certified. Call 508-619-3078.">
+<meta name="theme-color" content="#08090c">
+<link rel="stylesheet" href="lighthouse.css">
+<style>
+  /* ===== Home-only hero ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex; align-items: flex-end;
+    padding: 140px 0 80px;
+    overflow: hidden;
+  }
+  .hero__bg { position: absolute; inset: 0; z-index: 0; }
+  .hero__bg img {
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: 50% 40%;
+    opacity: 0.65;
+  }
+  .hero__bg::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(80% 60% at 70% 20%, rgba(41,151,255,0.18), transparent 60%),
+      linear-gradient(180deg, rgba(8,9,12,0.45) 0%, rgba(8,9,12,0) 30%, rgba(8,9,12,0.6) 70%, rgba(8,9,12,0.96) 100%),
+      linear-gradient(90deg, rgba(8,9,12,0.6) 0%, transparent 55%);
+  }
+  .hero__content { position: relative; z-index: 1; width: 100%; }
+  .hero__pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 6px 14px 6px 8px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.06);
+    font-size: 12.5px;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .hero__pill::before {
+    content: ""; width: 8px; height: 8px;
+    background: var(--green); border-radius: 999px;
+    box-shadow: 0 0 0 3px rgba(48,209,88,0.22);
+  }
+  .hero h1 {
+    font-size: clamp(56px, 9.5vw, 132px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    font-weight: 600;
+    margin: 0 0 28px;
+    max-width: 18ch;
+    color: #fff;
+  }
+  .hero h1 .soft { color: rgba(255,255,255,0.42); font-weight: 500; }
+  .hero h1 .blue { color: var(--cyan); }
+  .hero__sub {
+    font-size: clamp(18px, 1.8vw, 22px);
+    color: rgba(255,255,255,0.78);
+    max-width: 46ch;
+    margin: 0 0 40px;
+    line-height: 1.45;
+  }
+  .hero__actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .hero .ticker { margin-top: clamp(60px, 10vw, 100px); border-color: rgba(255,255,255,0.14); }
+
+  /* ===== Services stack ===== */
+  .svc-stack { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  .svc-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 820px) { .svc-pair { grid-template-columns: 1fr; } }
+  .svc-stack .photo-card { min-height: 480px; }
+  .svc-stack .photo-card__body { min-height: 480px; }
+  .svc-stack .photo-card h3 { font-size: clamp(28px, 4vw, 52px); }
+  .svc-pair .photo-card { min-height: 440px; }
+  .svc-pair .photo-card__body { min-height: 440px; }
+
+  /* ===== Rebate / efficiency hero ===== */
+  .rebate {
+    background:
+      radial-gradient(80% 60% at 80% 30%, rgba(48,209,88,0.22), transparent 55%),
+      radial-gradient(60% 50% at 10% 80%, rgba(41,151,255,0.14), transparent 60%),
+      var(--bg-2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .rebate__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  @media (max-width: 880px) { .rebate__grid { grid-template-columns: 1fr; } }
+  .rebate__big {
+    font-size: clamp(80px, 14vw, 220px);
+    line-height: 0.85;
+    letter-spacing: -0.045em;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(180deg, #fff 25%, rgba(48,209,88,0.95) 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .rebate__big-label {
+    margin-top: 12px;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .rebate__copy h2 {
+    font-size: clamp(28px, 3.8vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 18px;
+  }
+  .rebate__copy h2 .accent { color: var(--green); }
+  .rebate__copy p {
+    color: rgba(255,255,255,0.78);
+    font-size: 17px; margin: 0 0 28px;
+    max-width: 46ch; line-height: 1.5;
+  }
+  .rebate__chips {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    margin-top: 32px;
+  }
+  .rebate__chip {
+    padding: 16px 18px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+  }
+  .rebate__chip strong {
+    display: block;
+    font-size: 19px; font-weight: 600;
+    color: #fff; letter-spacing: -0.01em;
+  }
+  .rebate__chip span {
+    display: block; font-size: 12.5px;
+    color: rgba(255,255,255,0.55); margin-top: 4px;
+  }
+
+  /* ===== Reviews hero ===== */
+  .reviews-hero { text-align: center; max-width: 980px; margin: 0 auto; }
+  .reviews-hero__stars { color: var(--star); font-size: 20px; letter-spacing: 8px; margin-bottom: 24px; }
+  .reviews-hero__q {
+    font-size: clamp(32px, 5vw, 64px);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 36px;
+  }
+  .reviews-hero__q .accent { color: var(--cyan); }
+  .reviews-hero__by { font-size: 14px; color: var(--muted); letter-spacing: 0.04em; }
+  .reviews-hero__by strong { color: var(--ink); font-weight: 500; }
+  .reviews-row {
+    margin-top: clamp(64px, 8vw, 100px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 880px) { .reviews-row { grid-template-columns: 1fr; } }
+
+  /* ===== Service area teaser ===== */
+  .areas {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .areas__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  @media (max-width: 880px) { .areas__grid { grid-template-columns: 1fr; } }
+  .towns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .towns a {
+    padding: 14px 16px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    font-size: 14.5px;
+    color: var(--ink-2);
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    transition: background 150ms, border-color 150ms, color 150ms;
+  }
+  .towns a:hover { background: var(--card-hover); border-color: var(--blue); color: var(--ink); text-decoration: none; }
+  .towns a.more {
+    background: transparent; border-style: dashed;
+    color: var(--blue);
+  }
+  @media (max-width: 560px) { .towns { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ===== Final CTA ===== */
+  .final { text-align: center; padding: clamp(80px, 12vw, 140px) 0; }
+  .final h2 {
+    font-size: clamp(40px, 6.5vw, 88px);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    margin: 0 auto 24px;
+    max-width: 16ch;
+    color: #fff;
+  }
+  .final h2 .warm { color: var(--warm); }
+  .final p { color: var(--ink-2); font-size: 19px; margin: 0 auto 40px; max-width: 44ch; line-height: 1.45; }
+  .final__actions { display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .final__meta { display: block; margin-top: 32px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html">
+      <img src="../logo.png" alt="">
+      <span>Durfee</span>
+    </a>
+    <div class="nav__links">
+      <a href="services.html">Services</a>
+      <a href="mass-save-rebates.html">Rebates</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="nav__cta" href="instant-quote.html">Get a quote</a>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="top">
+  <div class="hero__bg">
+    <img src="../photos/fujitsu-minisplit.jpg" alt="">
+  </div>
+  <div class="container hero__content">
+    <span class="hero__pill">Available now · Mon–Fri 8a–4:30p · ~1 hr response</span>
+    <h1>Cool comfort.<br><span class="soft">Quiet efficiency.</span></h1>
+    <p class="hero__sub">Cape Cod's family-owned plumber and HVAC team. Heat pumps engineered for the climate, Mass Save rebates filed end-to-end, and a one-year warranty on every install.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="instant-quote.html">Get an instant quote</a>
+      <a class="btn btn--ghost" href="tel:+15086193078">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.9.36 1.78.7 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.27a2 2 0 0 1 2.11-.45c.82.34 1.7.57 2.6.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 508-619-3078
+      </a>
+    </div>
+
+    <div class="ticker">
+      <div>
+        <div class="ticker__num">20<sup>+ yrs</sup></div>
+        <div class="ticker__label">On Cape Cod</div>
+      </div>
+      <div>
+        <div class="ticker__num">~1<sup>hr</sup></div>
+        <div class="ticker__label">Avg. response</div>
+      </div>
+      <div>
+        <div class="ticker__num">1<sup>yr</sup></div>
+        <div class="ticker__label">Warranty</div>
+      </div>
+      <div>
+        <div class="ticker__num">17<sup>+</sup></div>
+        <div class="ticker__label">Towns served</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVICES ====== -->
+<section id="services">
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow">Services</div>
+      <h2>One crew. <span class="soft">Every system.</span></h2>
+      <p>No subcontractors. Master Plumber licensed, EPA certified. Every install walked through and signed off before we leave.</p>
+    </div>
+
+    <div class="svc-stack">
+      <a class="photo-card" href="heat-pump-installation.html">
+        <div class="photo-card__bg">
+          <img src="../photos/fujitsu-minisplit.jpg" alt="">
+        </div>
+        <div class="photo-card__body">
+          <span class="photo-card__tag photo-card__tag--green">Mass Save · up to $10,000 rebate</span>
+          <h3>Heat pumps, sized for Cape Cod winters.</h3>
+          <p>Ductless and centrally-ducted systems engineered for cold snaps. Quiet, efficient, and we file the Mass Save paperwork start to finish.</p>
+          <span class="arrow">Explore heat pumps</span>
+        </div>
+      </a>
+
+      <div class="svc-pair">
+        <a class="photo-card" href="water-heater-installation.html">
+          <div class="photo-card__bg"><img src="../photos/install-copper.jpg" alt=""></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Same-day available</span>
+            <h3>Water heaters. Tank, hybrid, tankless.</h3>
+            <p>Sized to your home. Most replacements done in a single visit.</p>
+            <span class="arrow">See options</span>
+          </div>
+        </a>
+        <a class="photo-card" href="drain-cleaning.html">
+          <div class="photo-card__bg"><img src="../photos/team-working.jpg" alt=""></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Flat-rate · no surprises</span>
+            <h3>Drains, snaked or jetted.</h3>
+            <p>Camera diagnosis for the tough ones. Quoted before we start.</p>
+            <span class="arrow">Drain services</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="svc-pair">
+        <a class="photo-card" href="gas-line-installation.html">
+          <div class="photo-card__bg"><img src="../photos/gas-line-copper.jpg" alt=""></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag photo-card__tag--warm">Permits handled</span>
+            <h3>Gas lines &amp; boilers.</h3>
+            <p>Natural gas and propane installs. Permits pulled, inspections coordinated.</p>
+            <span class="arrow">Gas &amp; boilers</span>
+          </div>
+        </a>
+        <a class="photo-card" href="plumbing-winterization.html">
+          <div class="photo-card__bg"><img src="../photos/winterize-house.jpg" alt=""></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Seasonal homes</span>
+            <h3>Winterizations &amp; openings.</h3>
+            <p>Shut-downs and spring re-opens, with a written checklist.</p>
+            <span class="arrow">Seasonal service</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== REBATES ====== -->
+<section class="rebate" id="rebates">
+  <div class="container">
+    <div class="rebate__grid">
+      <div>
+        <div class="eyebrow eyebrow--green">Mass Save · Efficiency rebates</div>
+        <div class="rebate__big">$10K</div>
+        <div class="rebate__big-label">Up to · Whole-home heat pump</div>
+      </div>
+      <div class="rebate__copy">
+        <h2>Real rebates, <span class="accent">actually filed.</span></h2>
+        <p>Mass Save offers serious credits on heat pumps and heat-pump water heaters. Our EPA-certified techs handle the qualification, the paperwork, and the inspection — you get the equipment and the rebate.</p>
+        <div class="hero__actions">
+          <a class="btn btn--green" href="mass-save-rebates.html">See available rebates</a>
+          <a class="btn btn--link" href="instant-quote.html">Get a quote</a>
+        </div>
+        <div class="rebate__chips">
+          <div class="rebate__chip"><strong>$750</strong><span>Heat-pump water heater</span></div>
+          <div class="rebate__chip"><strong>0% APR</strong><span>HEAT Loan financing</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== REVIEWS ====== -->
+<section id="reviews">
+  <div class="container">
+    <div class="reviews-hero">
+      <div class="reviews-hero__stars">★★★★★</div>
+      <blockquote class="reviews-hero__q">"Heat broke one cold January night. The owner came and fixed it — <span class="accent">even though he was sick with an earache.</span>"</blockquote>
+      <div class="reviews-hero__by"><strong>Brigid F.</strong> · Yelp · Five-star review</div>
+    </div>
+
+    <div class="reviews-row">
+      <article class="review-tile">
+        <div class="stars">★★★★★</div>
+        <blockquote>"When my tank came in early they made a point of coming to my house before they were scheduled — unheard of on Cape Cod. Their price was very fair as well."</blockquote>
+        <div class="who"><strong>Mo D.</strong><span>Yelp</span></div>
+      </article>
+      <article class="review-tile">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Phillip Durfee and every single one of his employees are excellent. Very prompt in responding and fixing the problems with our very old furnace."</blockquote>
+        <div class="who"><strong>T L.</strong><span>Yelp</span></div>
+      </article>
+      <article class="review-tile">
+        <div class="stars">★★★★★</div>
+        <blockquote>"They responded quickly to our call and we had a new hot water heater installed and working by mid afternoon. Courteous and polite."</blockquote>
+        <div class="who"><strong>Nan P.</strong><span>Yelp · Second-home</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVICE AREA ====== -->
+<section class="areas">
+  <div class="container">
+    <div class="areas__grid">
+      <div>
+        <div class="eyebrow eyebrow--cyan">Service area</div>
+        <h2 style="font-size:clamp(32px,4.4vw,52px);line-height:1.05;letter-spacing:-0.025em;font-weight:600;color:#fff;margin:0 0 18px;">17+ towns, one shop.</h2>
+        <p style="color:var(--ink-2);font-size:17px;line-height:1.5;max-width:46ch;margin:0 0 24px;">Trucks running daily across Cape Cod, Plymouth, and Wareham. Family-owned, dispatched from Dennis.</p>
+        <a class="btn btn--ghost" href="service-area.html">See full coverage map →</a>
+      </div>
+      <div class="towns">
+        <a href="hyannis.html">Hyannis</a>
+        <a href="yarmouth.html">Yarmouth</a>
+        <a href="barnstable.html">Barnstable</a>
+        <a href="dennis.html">Dennis</a>
+        <a href="falmouth.html">Falmouth</a>
+        <a href="harwich.html">Harwich</a>
+        <a href="brewster.html">Brewster</a>
+        <a href="chatham.html">Chatham</a>
+        <a href="orleans.html">Orleans</a>
+        <a href="eastham.html">Eastham</a>
+        <a href="service-area.html" class="more">+ 7 more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== QUOTE EMBED ====== -->
+<section class="embed-section" id="quote">
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow">Instant quote</div>
+      <h2>Flat-rate, <span class="soft">before we start.</span></h2>
+      <p>Answer a few questions and we'll come back with a number — no site visit required for most jobs.</p>
+    </div>
+
+    <div class="embed-card">
+      <!-- DINOQUOTE EMBED SLOT -->
+      <div class="embed-slot" data-embed="dinoquote-instant">
+        <div class="marker">DinoQuote · instant quote</div>
+        <h3>Widget loads in this card.</h3>
+        <p>Replace this slot with your DinoQuote instant-quoting embed. The card is sized for the flow with comfortable padding so the layout stays stable while the widget initializes.</p>
+        <code>&lt;iframe src="https://app.dinoquote.com/embed/durfee" loading="lazy" style="width:100%;height:900px;border:0"&gt;&lt;/iframe&gt;</code>
+      </div>
+      <!-- Replace the slot above with:
+      <iframe src="https://app.dinoquote.com/embed/durfee" loading="lazy" style="width:100%;height:900px;border:0"></iframe>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- ====== FINAL ====== -->
+<section class="final" id="contact">
+  <div class="container">
+    <h2>No heat?<br><span class="warm">Call now.</span></h2>
+    <p>We pick up the phone, give an honest ETA, and arrive in about an hour on average during business hours.</p>
+    <div class="final__actions">
+      <a class="btn btn--warm" href="tel:+15086193078" style="padding:16px 28px;font-size:17px">Call 508-619-3078</a>
+      <a class="btn btn--ghost" href="contact.html" style="padding:16px 28px;font-size:17px">Send a message</a>
+    </div>
+    <span class="final__meta">Mon–Fri 8a–4:30p · ~1 hour avg. response</span>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../logo.png" alt="">
+        <strong>Durfee Plumbing &amp; Heating</strong>
+        <span>22 Diamonds Path, Unit 7<br>Dennis, MA 02660<br>Mon–Fri 8a–4:30p</span>
+        <div class="footer__creds">
+          <span>MA Master Plumber</span>
+          <span>EPA 608</span>
+          <span>Insured</span>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Plumbing</h4>
+        <ul>
+          <li><a href="water-heater-installation.html">Water heaters</a></li>
+          <li><a href="tankless-water-heaters.html">Tankless</a></li>
+          <li><a href="drain-cleaning.html">Drain cleaning</a></li>
+          <li><a href="gas-line-installation.html">Gas lines</a></li>
+          <li><a href="plumbing-winterization.html">Winterization</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>HVAC</h4>
+        <ul>
+          <li><a href="heat-pump-installation.html">Heat pumps</a></li>
+          <li><a href="ductless-mini-split.html">Mini splits</a></li>
+          <li><a href="duct-cleaning.html">Duct cleaning</a></li>
+          <li><a href="mass-save-rebates.html">Mass Save</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Service area</h4>
+        <ul>
+          <li><a href="hyannis.html">Hyannis</a></li>
+          <li><a href="yarmouth.html">Yarmouth</a></li>
+          <li><a href="dennis.html">Dennis</a></li>
+          <li><a href="falmouth.html">Falmouth</a></li>
+          <li><a href="service-area.html">All towns</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="tel:+15086193078">508-619-3078</a></li>
+          <li><a href="mailto:phil@durfeeplumbing.com">phil@durfeeplumbing.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2026 Durfee Plumbing &amp; Heating · MA Master Plumber · EPA 608 · Insured</div>
+      <div class="footer__social">
+        <a href="https://www.yelp.com/biz/durfee-plumbing-and-heating-dennis-3" target="_blank" rel="noopener" aria-label="Read our reviews on Yelp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M14.2 11.1l3.6-1.8c.7-.4 1.5.1 1.5.9V13c0 .8-.8 1.3-1.5.9l-3.6-1.8c-.7-.3-.7-1.3 0-1zm-.6 4l3.5 2.5c.6.5.5 1.5-.3 1.7l-2.5.9c-.8.3-1.6-.4-1.5-1.2l.2-3.4c.1-.7.9-1 1.6-.5zm-2.5-3.2l-1-5.6c-.1-.8-.9-1.3-1.7-1l-1.6.6c-.7.3-1 1.2-.6 1.9l2.7 4.9c.4.8 1.6.5 2.2-.8zm.3 1.7c.1.7-.7 1.2-1.4.9l-3.4-1.5c-.8-.3-.8-1.5 0-1.8l3.4-1.5c.7-.3 1.5.2 1.4.9z"/></svg>
+          <span>Yelp</span>
+        </a>
+        <a href="https://www.google.com/search?q=Durfee+Plumbing+%26+Heating+Dennis+MA" target="_blank" rel="noopener" aria-label="Read our reviews on Google">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.6z"/><path d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.7v2.7C4.4 19.8 7.9 22 12 22z" opacity=".85"/><path d="M6.2 13.6c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9V7.1H2.7C2 8.5 1.6 10.2 1.6 12s.4 3.5 1.1 4.9l3.5-2.7z" opacity=".7"/><path d="M12 5.8c1.5 0 2.9.5 4 1.5l3-3C17.2 2.6 14.8 1.6 12 1.6 7.9 1.6 4.4 3.8 2.7 7.1l3.5 2.7c.8-2.5 3.1-4 5.8-4z" opacity=".55"/></svg>
+          <span>Google</span>
+        </a>
+        <a href="https://www.facebook.com/durfeeplumbing/" target="_blank" rel="noopener" aria-label="Durfee Plumbing on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2.2-2H17V2.2C16.6 2.1 15.5 2 14.3 2 11.7 2 10 3.6 10 6.5V10H7v4h3v8h3z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
