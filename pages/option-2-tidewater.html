@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Durfee Plumbing &amp; Heating — Cape Cod</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cape Cod's family-owned plumber & HVAC team. Fast response, flat-rate pricing, 1-year warranty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap">
+<style>
+  :root {
+    --bg: #F6F1E8;
+    --bg-2: #EEE6D6;
+    --paper: #FBF8F1;
+    --ink: #221C13;
+    --ink-2: #4A3F2E;
+    --muted: #897C66;
+    --line: #DDD2BC;
+    --line-2: #C9BC9F;
+    --accent: #C2410C;
+    --accent-deep: #8A2D08;
+    --container: 1200px;
+
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --serif: "Source Serif 4", "Charter", "Iowan Old Style", "Apple Garamond", Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  img { display: block; max-width: 100%; }
+  .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: clamp(20px, 4vw, 48px); }
+
+  /* ============= TOP UTIL ============= */
+  .util {
+    background: var(--ink);
+    color: rgba(255,255,255,0.84);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .util__row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 9px 0;
+    flex-wrap: wrap; gap: 10px;
+  }
+  .util__left { display: flex; gap: 18px; flex-wrap: wrap; }
+  .util__left strong { color: #fff; font-weight: 500; }
+  .util__phone { color: #fff; font-weight: 500; }
+  .util__phone:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 720px) { .util__left { display: none; } }
+
+  /* ============= NAV ============= */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(246,241,232,0.86);
+    backdrop-filter: saturate(160%) blur(16px);
+    -webkit-backdrop-filter: saturate(160%) blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav__row {
+    display: flex; align-items: center; gap: 24px;
+    padding: 18px 0;
+  }
+  .nav__brand {
+    display: inline-flex; align-items: center; gap: 12px;
+    color: var(--ink);
+  }
+  .nav__brand:hover { text-decoration: none; }
+  .nav__brand img { width: 44px; height: 42px; object-fit: contain; }
+  .nav__brand-name {
+    display: flex; flex-direction: column;
+    line-height: 1.1;
+  }
+  .nav__brand-name strong {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .nav__brand-name small {
+    font-size: 11px; color: var(--muted);
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .nav__links {
+    display: flex; gap: 4px; flex: 1; justify-content: center;
+  }
+  .nav__links a {
+    color: var(--ink-2); padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14.5px; font-weight: 500;
+  }
+  .nav__links a:hover { background: var(--bg-2); color: var(--ink); text-decoration: none; }
+  .nav__cta {
+    background: var(--ink); color: var(--bg);
+    padding: 11px 20px;
+    border-radius: 999px;
+    font-size: 14px; font-weight: 500;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .nav__cta:hover { background: #000; color: var(--bg); text-decoration: none; }
+  .nav__cta::before {
+    content: ""; width: 6px; height: 6px;
+    background: var(--accent); border-radius: 999px;
+  }
+  @media (max-width: 880px) { .nav__links { display: none; } }
+
+  /* ============= HERO ============= */
+  .hero {
+    padding: clamp(48px, 8vw, 96px) 0 clamp(40px, 6vw, 80px);
+  }
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: end;
+  }
+  @media (max-width: 920px) { .hero__grid { grid-template-columns: 1fr; align-items: start; } }
+
+  .hero__kicker {
+    font-size: 13px; font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.14em; text-transform: uppercase;
+    margin-bottom: 28px;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .hero__kicker::before {
+    content: ""; width: 28px; height: 1px; background: var(--accent);
+  }
+  .hero__h1 {
+    font-family: var(--serif);
+    font-size: clamp(48px, 7.5vw, 96px);
+    line-height: 1.0;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    margin: 0 0 28px;
+  }
+  .hero__h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero__lede {
+    font-size: clamp(18px, 1.8vw, 21px);
+    color: var(--ink-2);
+    line-height: 1.5;
+    margin: 0 0 32px;
+    max-width: 38ch;
+  }
+  .hero__actions {
+    display: inline-flex; gap: 14px; align-items: center; flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--sans);
+    font-size: 15px; font-weight: 500;
+    padding: 14px 24px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: background 150ms, color 150ms, transform 80ms, border-color 150ms;
+    cursor: pointer;
+  }
+  .btn:hover { text-decoration: none; }
+  .btn:active { transform: translateY(1px); }
+  .btn--dark { background: var(--ink); color: var(--bg); }
+  .btn--dark:hover { background: #000; color: var(--bg); }
+  .btn--ghost { background: transparent; color: var(--ink); border-color: var(--line-2); }
+  .btn--ghost:hover { background: var(--bg-2); }
+  .btn--accent { background: var(--accent); color: #fff; }
+  .btn--accent:hover { background: var(--accent-deep); color: #fff; }
+  .btn--link { color: var(--ink); padding: 14px 4px; font-weight: 500; }
+  .btn--link::after { content: "›"; font-size: 18px; transition: transform 200ms; }
+  .btn--link:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .btn--link:hover::after { transform: translateX(3px); }
+
+  /* hero photo */
+  .hero__photo {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--bg-2);
+  }
+  .hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 60% center; }
+  .hero__photo-meta {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(34,28,19,0.78) 60%);
+    color: rgba(255,255,255,0.92);
+    padding: 60px 24px 22px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .hero__photo-meta strong { color: #fff; font-weight: 500; }
+
+  /* hero footer-ish — bylines + credentials */
+  .hero__creds {
+    margin-top: clamp(40px, 5vw, 64px);
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 720px) { .hero__creds { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+  .cred__num {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.4vw, 42px);
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+  .cred__label {
+    margin-top: 8px;
+    font-size: 12.5px; color: var(--muted);
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* ============= SECTION HEAD ============= */
+  section { padding: clamp(80px, 12vw, 140px) 0; }
+  .head {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(32px, 5vw, 80px);
+    align-items: end;
+    margin-bottom: clamp(40px, 6vw, 64px);
+  }
+  @media (max-width: 760px) { .head { grid-template-columns: 1fr; gap: 18px; align-items: start; } }
+  .head__num {
+    font-family: var(--serif);
+    font-size: clamp(48px, 6vw, 72px);
+    color: var(--accent);
+    line-height: 1;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .head__title {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4.2vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    margin: 0;
+  }
+  .head__title em { font-style: italic; color: var(--accent); }
+  .head__title .small-cap {
+    font-family: var(--sans);
+    font-size: 0.4em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 18px;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* ============= SERVICES (editorial cards) ============= */
+  .services {
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .svc-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 24px;
+  }
+  @media (max-width: 920px) { .svc-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .svc-grid { grid-template-columns: 1fr; } }
+  .svc {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 200ms, border-color 200ms;
+  }
+  .svc:hover { transform: translateY(-3px); border-color: var(--line-2); text-decoration: none; }
+  .svc--feature { grid-column: 1 / 2; grid-row: 1 / 3; background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  @media (max-width: 920px) { .svc--feature { grid-column: auto; grid-row: auto; } }
+
+  .svc__photo {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--bg-2);
+    position: relative;
+  }
+  .svc__photo img { width: 100%; height: 100%; object-fit: cover; }
+  .svc--feature .svc__photo { aspect-ratio: 4 / 5; }
+
+  .svc__body {
+    padding: 26px 28px 28px;
+    display: flex; flex-direction: column; gap: 10px;
+    flex: 1;
+  }
+  .svc__tag {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .svc--feature .svc__tag { color: #FF9D4D; }
+  .svc__h3 {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-weight: 400;
+    color: var(--ink);
+    margin: 0;
+  }
+  .svc--feature .svc__h3 { color: #fff; font-size: clamp(28px, 3vw, 38px); }
+  .svc__p {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .svc--feature .svc__p { color: rgba(255,255,255,0.72); }
+  .svc__arrow {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 500;
+    display: inline-flex; align-items: center; gap: 4px;
+  }
+  .svc--feature .svc__arrow { color: #FF9D4D; }
+
+  /* ============= PULL QUOTE ============= */
+  .pull {
+    background: var(--bg-2);
+  }
+  .pull__inner {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .pull__mark {
+    font-family: var(--serif);
+    font-size: 100px;
+    line-height: 0.6;
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 24px;
+    display: block;
+  }
+  .pull__q {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4.5vw, 52px);
+    line-height: 1.18;
+    letter-spacing: -0.015em;
+    font-weight: 400;
+    margin: 0 0 40px;
+  }
+  .pull__q em { font-style: italic; color: var(--accent); }
+  .pull__byline {
+    font-size: 13px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted);
+    font-weight: 500;
+  }
+  .pull__byline strong { color: var(--ink-2); font-weight: 500; }
+
+  /* ============= REBATES (editorial split) ============= */
+  .rebates__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+  @media (max-width: 880px) { .rebates__grid { grid-template-columns: 1fr; } }
+  .rebates__copy h3 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.4vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    margin: 0 0 20px;
+  }
+  .rebates__copy h3 .big {
+    color: var(--accent);
+    font-style: italic;
+  }
+  .rebates__copy p { font-size: 17px; color: var(--ink-2); margin: 0 0 28px; max-width: 50ch; }
+
+  .rebates__list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+  .rebates__list li {
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 18px;
+    align-items: baseline;
+  }
+  .rebates__list li:last-child { border-bottom: 1px solid var(--line); }
+  .rebates__list strong {
+    font-family: var(--serif);
+    font-size: 26px; font-weight: 400;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+  .rebates__list span { color: var(--ink-2); font-size: 15.5px; }
+
+  /* ============= GALLERY STRIP ============= */
+  .strip {
+    padding-top: 0;
+  }
+  .strip__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 760px) { .strip__row { grid-template-columns: 1fr; } }
+  .strip__img {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--bg-2);
+  }
+  .strip__img img { width: 100%; height: 100%; object-fit: cover; }
+  .strip__cap {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .strip__cap strong { color: var(--ink-2); font-weight: 500; }
+
+  /* ============= REVIEWS ============= */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 760px) { .reviews-grid { grid-template-columns: 1fr; } }
+  .review {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 32px;
+  }
+  .review__stars { color: #C44D00; font-size: 14px; letter-spacing: 4px; margin-bottom: 16px; }
+  .review blockquote {
+    margin: 0 0 18px;
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.45;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .review__by {
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between;
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .review__by strong { color: var(--ink-2); font-weight: 500; letter-spacing: 0.04em; }
+
+  /* ============= QUOTE EMBED ============= */
+  .quote-embed {
+    background: var(--ink);
+    color: var(--bg);
+  }
+  .quote-embed .head__title { color: var(--bg); }
+  .quote-embed .head__num { color: #FF9D4D; }
+  .quote-embed .head__title em { color: #FF9D4D; }
+  .quote-embed .head__title .small-cap { color: rgba(255,255,255,0.55); }
+
+  .quote-card {
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.4);
+  }
+  .quote-slot {
+    padding: clamp(40px, 5vw, 64px);
+    min-height: 520px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+  }
+  .quote-slot .marker {
+    font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent);
+    font-weight: 500; margin-bottom: 18px;
+  }
+  .quote-slot h3 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.8vw, 32px);
+    line-height: 1.2; font-weight: 400;
+    margin: 0 0 14px; letter-spacing: -0.015em;
+  }
+  .quote-slot p {
+    font-size: 16px; color: var(--ink-2);
+    margin: 0 0 24px; max-width: 44ch;
+  }
+  .quote-slot code {
+    display: block; padding: 14px 18px;
+    background: var(--bg-2); border-radius: 6px;
+    font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+    font-size: 12px; color: var(--ink-2);
+    word-break: break-all; max-width: 100%;
+  }
+
+  /* ============= EMERGENCY ============= */
+  .emergency-card {
+    background: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    padding: clamp(40px, 6vw, 64px);
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (max-width: 760px) { .emergency-card { grid-template-columns: 1fr; } }
+  .emergency-card h3 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.4vw, 42px);
+    line-height: 1.1;
+    margin: 0 0 14px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #fff;
+  }
+  .emergency-card h3 em { font-style: italic; }
+  .emergency-card p { color: rgba(255,255,255,0.88); font-size: 16.5px; margin: 0; max-width: 44ch; }
+  .emergency-card .actions { display: flex; flex-direction: column; gap: 10px; }
+  .emergency-card .btn--white { background: #fff; color: var(--accent); }
+  .emergency-card .btn--white:hover { background: #fff0e6; color: var(--accent); }
+  .emergency-card .btn--clear { background: transparent; color: #fff; border-color: rgba(255,255,255,0.4); }
+  .emergency-card .btn--clear:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+  /* ============= FOOTER ============= */
+  footer {
+    background: var(--ink);
+    color: rgba(251,248,241,0.74);
+    padding: clamp(48px, 6vw, 80px) 0 28px;
+    font-size: 13.5px;
+  }
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  @media (max-width: 880px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+  .footer__brand { display: flex; gap: 14px; align-items: flex-start; }
+  .footer__brand img { width: 56px; height: 54px; object-fit: contain; flex: none; }
+  .footer__brand strong {
+    color: #fff; font-family: var(--serif);
+    font-size: 19px; font-weight: 500;
+    display: block; margin-bottom: 4px;
+    letter-spacing: -0.005em;
+  }
+  .footer__brand span { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.55; }
+  .footer__col h4 {
+    color: #fff; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    font-weight: 500; margin: 0 0 16px;
+  }
+  .footer__col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+  .footer__col a { color: rgba(251,248,241,0.74); }
+  .footer__col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .footer__bottom {
+    padding-top: 22px;
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.04em;
+  }
+
+  /* hint banner */
+  .preview-hint {
+    position: fixed; bottom: 18px; left: 18px; z-index: 200;
+    background: var(--ink); color: #fff;
+    font-size: 12px; padding: 8px 14px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+  .preview-hint a { color: #FF9D4D; margin-left: 8px; }
+
+  /* zero out double section padding for stacked sections */
+  .no-top-pad { padding-top: 0; }
+</style>
+</head>
+<body>
+
+<!-- =========== TOP UTIL =========== -->
+<div class="util">
+  <div class="container">
+    <div class="util__row">
+      <div class="util__left">
+        <span><strong>Family-owned</strong> · Cape Cod since 2005</span>
+        <span>MA Master Plumber · EPA 608</span>
+      </div>
+      <a class="util__phone" href="tel:+15086193078">508 · 619 · 3078</a>
+    </div>
+  </div>
+</div>
+
+<!-- =========== NAV =========== -->
+<nav class="nav" aria-label="Primary">
+  <div class="container">
+    <div class="nav__row">
+      <a class="nav__brand" href="#top">
+        <img src="../photos/logo.png" alt="">
+        <span class="nav__brand-name">
+          <strong>Durfee</strong>
+          <small>Plumbing &amp; Heating</small>
+        </span>
+      </a>
+      <div class="nav__links">
+        <a href="#services">Services</a>
+        <a href="#rebates">Rebates</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#quote">Quote</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav__cta" href="#quote">Get a quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =========== HERO =========== -->
+<section class="hero" id="top" style="padding-bottom:0">
+  <div class="container">
+    <div class="hero__grid">
+      <div>
+        <div class="hero__kicker">No. 01 · A family business</div>
+        <h1 class="hero__h1">Cape Cod's plumber,<br><em>for twenty years.</em></h1>
+        <p class="hero__lede">Flat-rate before we start. One-hour average response. A one-year warranty on every install — no asterisks.</p>
+        <div class="hero__actions">
+          <a class="btn btn--dark" href="#quote">Get an instant quote</a>
+          <a class="btn btn--link" href="tel:+15086193078">Or call us</a>
+        </div>
+      </div>
+      <figure class="hero__photo" style="margin:0">
+        <img src="../photos/phil-truck.jpg" alt="Phil Durfee, owner, on a Cape Cod job site">
+        <figcaption class="hero__photo-meta">
+          <span><strong>Phil Durfee</strong> · Owner</span>
+          <span>Dennis, MA</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="hero__creds">
+      <div>
+        <div class="cred__num">20+</div>
+        <div class="cred__label">Years serving<br>Cape Cod</div>
+      </div>
+      <div>
+        <div class="cred__num">~1 hr</div>
+        <div class="cred__label">Average emergency<br>response time</div>
+      </div>
+      <div>
+        <div class="cred__num">17+</div>
+        <div class="cred__label">Towns served on<br>the Cape &amp; South Shore</div>
+      </div>
+      <div>
+        <div class="cred__num">1 yr</div>
+        <div class="cred__label">Parts &amp; labor warranty<br>on every install</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== SERVICES =========== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="head">
+      <div class="head__num">01</div>
+      <h2 class="head__title">
+        <span class="small-cap">Services</span>
+        Every system, <em>one crew.</em>
+      </h2>
+    </div>
+
+    <div class="svc-grid">
+      <a class="svc svc--feature" href="heat-pump-installation.html">
+        <div class="svc__photo">
+          <img src="../photos/fujitsu-minisplit.jpg" alt="Fujitsu ductless heat pump installation">
+        </div>
+        <div class="svc__body">
+          <span class="svc__tag">Featured · Mass Save</span>
+          <h3 class="svc__h3">Heat pump installation, sized for Cape Cod winters.</h3>
+          <p class="svc__p">Ductless and centrally-ducted systems. We handle Mass Save rebate paperwork start to finish — up to $10,000 back on whole-home installs.</p>
+          <span class="svc__arrow">Read more ›</span>
+        </div>
+      </a>
+
+      <a class="svc" href="water-heater-installation.html">
+        <div class="svc__photo"><img src="../photos/install-copper.jpg" alt="New water heater install"></div>
+        <div class="svc__body">
+          <span class="svc__tag">Same-day</span>
+          <h3 class="svc__h3">Water heaters &amp; tankless</h3>
+          <p class="svc__p">Tank, hybrid heat-pump, and tankless — most replacements done in one visit.</p>
+        </div>
+      </a>
+
+      <a class="svc" href="drain-cleaning.html">
+        <div class="svc__photo"><img src="../photos/team-working.jpg" alt="Durfee crew on-site"></div>
+        <div class="svc__body">
+          <span class="svc__tag">Flat-rate</span>
+          <h3 class="svc__h3">Drain cleaning &amp; repair</h3>
+          <p class="svc__p">Snaking, hydro-jetting, and camera diagnosis. Quoted before we start.</p>
+        </div>
+      </a>
+
+      <a class="svc" href="gas-line-installation.html">
+        <div class="svc__photo"><img src="../photos/gas-line-copper.jpg" alt="Copper gas line work"></div>
+        <div class="svc__body">
+          <span class="svc__tag">Permits handled</span>
+          <h3 class="svc__h3">Gas lines &amp; boilers</h3>
+          <p class="svc__p">Natural gas and propane. Permits pulled, inspections coordinated.</p>
+        </div>
+      </a>
+
+      <a class="svc" href="plumbing-winterization.html">
+        <div class="svc__photo"><img src="../photos/winterize-house.jpg" alt="Winterized Cape Cod home"></div>
+        <div class="svc__body">
+          <span class="svc__tag">Seasonal homes</span>
+          <h3 class="svc__h3">Winterizations &amp; openings</h3>
+          <p class="svc__p">Shut-downs and spring re-opens for second homes, with a written checklist.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =========== PULL QUOTE =========== -->
+<section class="pull">
+  <div class="container">
+    <div class="pull__inner">
+      <span class="pull__mark">"</span>
+      <blockquote class="pull__q">Heat broke one cold, sleeting January night. The owner came and fixed it <em>even though he was sick with an earache.</em></blockquote>
+      <div class="pull__byline"><strong>Brigid F.</strong> &nbsp;·&nbsp; Yelp · Five-star review</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== REBATES =========== -->
+<section id="rebates">
+  <div class="container">
+    <div class="head">
+      <div class="head__num">02</div>
+      <h2 class="head__title">
+        <span class="small-cap">Mass Save</span>
+        Real rebates, <em>actually filed.</em>
+      </h2>
+    </div>
+
+    <div class="rebates__grid">
+      <div class="rebates__copy">
+        <h3>Up to <span class="big">$10,000</span> back on a whole-home heat pump.</h3>
+        <p>Our EPA-certified techs handle the qualification, the paperwork, and the inspection. You get the equipment and the rebate — no chasing.</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="mass-save-rebates.html">See available rebates</a>
+          <a class="btn btn--link" href="#quote">Request a quote</a>
+        </div>
+      </div>
+      <ul class="rebates__list">
+        <li><strong>Up to $10K</strong><span>Whole-home heat pump rebate</span></li>
+        <li><strong>$750</strong><span>Heat-pump water heater rebate</span></li>
+        <li><strong>0% APR</strong><span>HEAT Loan financing options</span></li>
+        <li><strong>We file</strong><span>Paperwork end-to-end, no chasing</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =========== GALLERY STRIP =========== -->
+<section class="strip no-top-pad">
+  <div class="container">
+    <div class="strip__row">
+      <figure style="margin:0">
+        <div class="strip__img"><img src="../photos/boiler-install.jpg" alt="Boiler installation in progress"></div>
+        <figcaption class="strip__cap"><strong>Boiler install</strong> · Yarmouth, MA</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div class="strip__img"><img src="../photos/fleet-trucks.jpg" alt="Durfee service trucks lined up at the shop"></div>
+        <figcaption class="strip__cap"><strong>The fleet</strong> · Dennis, MA</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div class="strip__img"><img src="../photos/team-copper.jpg" alt="Crew running copper supply lines"></div>
+        <figcaption class="strip__cap"><strong>Copper work</strong> · Chatham, MA</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =========== REVIEWS =========== -->
+<section id="reviews" style="padding-top:0">
+  <div class="container">
+    <div class="head">
+      <div class="head__num">03</div>
+      <h2 class="head__title">
+        <span class="small-cap">Neighbors</span>
+        Words from <em>real customers.</em>
+      </h2>
+    </div>
+
+    <div class="reviews-grid">
+      <figure class="review" style="margin:0">
+        <div class="review__stars">★★★★★</div>
+        <blockquote>When my tank came in early they made a point of coming to my house before they were scheduled — unheard of on Cape Cod. Their price was very fair as well.</blockquote>
+        <figcaption class="review__by"><strong>Mo D.</strong><span>Yelp · Verified</span></figcaption>
+      </figure>
+      <figure class="review" style="margin:0">
+        <div class="review__stars">★★★★★</div>
+        <blockquote>Phillip Durfee and every single one of his employees are excellent. Very prompt in responding and fixing the problems with our very old furnace and water heater.</blockquote>
+        <figcaption class="review__by"><strong>T L.</strong><span>Yelp · Verified</span></figcaption>
+      </figure>
+      <figure class="review" style="margin:0">
+        <div class="review__stars">★★★★★</div>
+        <blockquote>When I called Durfee's a few hours after the install because of a leaky vacuum valve, the guys came back within minutes and quickly replaced it.</blockquote>
+        <figcaption class="review__by"><strong>Robert F.</strong><span>Yelp · Verified</span></figcaption>
+      </figure>
+      <figure class="review" style="margin:0">
+        <div class="review__stars">★★★★★</div>
+        <blockquote>They responded quickly to our call and we had a new hot water heater installed and working by mid afternoon. Courteous and polite.</blockquote>
+        <figcaption class="review__by"><strong>Nan P.</strong><span>Yelp · Second-home owner</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =========== QUOTE EMBED =========== -->
+<section class="quote-embed" id="quote">
+  <div class="container">
+    <div class="head">
+      <div class="head__num">04</div>
+      <h2 class="head__title">
+        <span class="small-cap">Instant quote</span>
+        Flat-rate, <em>before we start.</em>
+      </h2>
+    </div>
+
+    <div class="quote-card">
+      <!-- DINOQUOTE EMBED SLOT -->
+      <div class="quote-slot" data-embed="dinoquote-instant">
+        <div class="marker">DinoQuote · instant quote</div>
+        <h3>Widget loads in this card.</h3>
+        <p>Replace this slot with your DinoQuote instant-quoting embed. The card is sized for the flow with comfortable padding so the layout doesn't jump as the widget initializes.</p>
+        <code>&lt;iframe src="https://app.dinoquote.com/embed/durfee" loading="lazy" style="width:100%;height:900px;border:0"&gt;&lt;/iframe&gt;</code>
+      </div>
+      <!-- Replace the slot above with:
+      <iframe src="https://app.dinoquote.com/embed/durfee" loading="lazy" style="width:100%;height:900px;border:0"></iframe>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- =========== EMERGENCY =========== -->
+<section id="contact" style="padding-top:0">
+  <div class="container">
+    <div class="emergency-card">
+      <div>
+        <h3>No heat in January?<br><em>Burst pipe in February?</em></h3>
+        <p>We pick up the phone, give an honest ETA, and arrive in about an hour on average during business hours.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn--white" href="tel:+15086193078">Call 508-619-3078</a>
+        <a class="btn btn--clear" href="contact.html">Send a message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== FOOTER =========== -->
+<footer>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../photos/logo.png" alt="">
+        <div>
+          <strong>Durfee Plumbing &amp; Heating</strong>
+          <span>22 Diamonds Path, Unit 7<br>Dennis, MA 02660<br>Mon–Fri 8a–4:30p</span>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Plumbing</h4>
+        <ul>
+          <li><a href="water-heater-installation.html">Water heaters</a></li>
+          <li><a href="tankless-water-heaters.html">Tankless</a></li>
+          <li><a href="drain-cleaning.html">Drain cleaning</a></li>
+          <li><a href="gas-line-installation.html">Gas lines</a></li>
+          <li><a href="plumbing-winterization.html">Winterization</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>HVAC</h4>
+        <ul>
+          <li><a href="heat-pump-installation.html">Heat pumps</a></li>
+          <li><a href="ductless-mini-split.html">Mini splits</a></li>
+          <li><a href="duct-cleaning.html">Duct cleaning</a></li>
+          <li><a href="mass-save-rebates.html">Mass Save</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="service-area.html">Service area</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="tel:+15086193078">508-619-3078</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2026 Durfee Plumbing &amp; Heating · MA Master Plumber · EPA 608 · Insured</div>
+      <div class="footer__social">
+        <a href="https://www.yelp.com/biz/durfee-plumbing-and-heating-dennis-3" target="_blank" rel="noopener" aria-label="Read our reviews on Yelp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M14.2 11.1l3.6-1.8c.7-.4 1.5.1 1.5.9V13c0 .8-.8 1.3-1.5.9l-3.6-1.8c-.7-.3-.7-1.3 0-1zm-.6 4l3.5 2.5c.6.5.5 1.5-.3 1.7l-2.5.9c-.8.3-1.6-.4-1.5-1.2l.2-3.4c.1-.7.9-1 1.6-.5zm-2.5-3.2l-1-5.6c-.1-.8-.9-1.3-1.7-1l-1.6.6c-.7.3-1 1.2-.6 1.9l2.7 4.9c.4.8 1.6.5 2.2-.8zm.3 1.7c.1.7-.7 1.2-1.4.9l-3.4-1.5c-.8-.3-.8-1.5 0-1.8l3.4-1.5c.7-.3 1.5.2 1.4.9z"/></svg>
+          <span>Yelp</span>
+        </a>
+        <a href="https://www.google.com/search?q=Durfee+Plumbing+%26+Heating+Dennis+MA" target="_blank" rel="noopener" aria-label="Read our reviews on Google">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.6z"/><path d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.7v2.7C4.4 19.8 7.9 22 12 22z" opacity=".85"/><path d="M6.2 13.6c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9V7.1H2.7C2 8.5 1.6 10.2 1.6 12s.4 3.5 1.1 4.9l3.5-2.7z" opacity=".7"/><path d="M12 5.8c1.5 0 2.9.5 4 1.5l3-3C17.2 2.6 14.8 1.6 12 1.6 7.9 1.6 4.4 3.8 2.7 7.1l3.5 2.7c.8-2.5 3.1-4 5.8-4z" opacity=".55"/></svg>
+          <span>Google</span>
+        </a>
+        <a href="https://www.facebook.com/durfeeplumbing/" target="_blank" rel="noopener" aria-label="Durfee Plumbing on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2.2-2H17V2.2C16.6 2.1 15.5 2 14.3 2 11.7 2 10 3.6 10 6.5V10H7v4h3v8h3z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="preview-hint">Tidewater · concept 02<a href="../index.html">all concepts</a></div>
+
+</body>
+</html>

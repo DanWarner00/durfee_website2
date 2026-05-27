@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tankless Water Heaters — Durfee Plumbing &amp; Heating</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tankless water heater installation on Cape Cod. Endless hot water, smaller footprint, lower standby losses.">
+<meta name="theme-color" content="#08090c">
+<link rel="stylesheet" href="../css/lighthouse.css">
+
+<style>
+  .svc-page-hero {
+    padding: 140px 0 60px; position: relative; overflow: hidden;
+  }
+  .svc-page-hero__grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  @media (max-width: 920px) { .svc-page-hero__grid { grid-template-columns: 1fr; } }
+  .svc-page-hero h1 {
+    font-size: clamp(44px, 6.5vw, 84px);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 24px;
+    max-width: 16ch;
+  }
+  .svc-page-hero h1 .accent { color: var(--blue); }
+  .svc-page-hero h1 .green { color: var(--green); }
+  .svc-page-hero__lede {
+    font-size: clamp(17px, 1.7vw, 20px);
+    color: var(--ink-2); line-height: 1.55;
+    margin: 0 0 32px; max-width: 52ch;
+  }
+  .svc-page-hero__bullets {
+    list-style: none; padding: 0; margin: 32px 0 0;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px;
+  }
+  .svc-page-hero__bullets li { border-left: 2px solid var(--blue); padding-left: 14px; }
+  .svc-page-hero__bullets strong { color: #fff; font-size: 15px; display: block; font-weight: 600; }
+  .svc-page-hero__bullets span { color: var(--muted); font-size: 13px; }
+  .svc-page-hero__photo {
+    aspect-ratio: 4 / 5; border-radius: 24px;
+    overflow: hidden; background: var(--card);
+    position: relative;
+  }
+  .svc-page-hero__photo img { width: 100%; height: 100%; object-fit: cover; }
+  .svc-page-hero__photo figcaption {
+    position: absolute; bottom: 20px; left: 20px; right: 20px;
+    padding: 12px 16px; background: rgba(8,9,12,0.75);
+    backdrop-filter: blur(14px);
+    border-radius: 12px; color: #fff;
+    font-size: 12.5px; display: flex; justify-content: space-between;
+    letter-spacing: 0.02em;
+  }
+  .svc-page-hero__photo strong { font-weight: 500; }
+  .svc-page-hero__photo small { color: rgba(255,255,255,0.6); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+  .why-card {
+    padding: 28px; background: var(--card);
+    border: 1px solid var(--line); border-radius: 16px;
+  }
+  .why-card__icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--blue-soft); color: var(--blue);
+    display: grid; place-items: center;
+    font-family: var(--mono); font-weight: 600; font-size: 13px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(41,151,255,0.25);
+  }
+  .why-card--green .why-card__icon { background: var(--green-soft); color: var(--green); border-color: rgba(48,209,88,0.25); }
+  .why-card h3 { font-size: 18px; font-weight: 600; color: #fff; margin: 0 0 8px; letter-spacing: -0.005em; }
+  .why-card p { font-size: 14.5px; color: var(--ink-2); margin: 0; line-height: 1.5; }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  @media (max-width: 880px) { .steps-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .steps-grid { grid-template-columns: 1fr; } }
+  .step-card { padding: 32px; background: var(--bg); }
+  .step-card__num {
+    font-family: var(--mono); font-size: 12px;
+    letter-spacing: 0.14em; color: var(--blue);
+    margin-bottom: 16px;
+  }
+  .step-card h3 { font-size: 18px; font-weight: 600; color: #fff; margin: 0 0 8px; letter-spacing: -0.005em; }
+  .step-card p { font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.5; }
+
+  .faq { display: grid; gap: 10px; max-width: 880px; }
+  .faq details {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 4px 24px;
+  }
+  .faq summary {
+    cursor: pointer; list-style: none;
+    font-weight: 500; color: #fff; font-size: 16.5px;
+    padding: 22px 0; display: flex; justify-content: space-between;
+    gap: 18px; align-items: center; letter-spacing: -0.005em;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary .plus { color: var(--blue); font-size: 22px; transition: transform 180ms; line-height: 1; }
+  .faq details[open] summary .plus { transform: rotate(45deg); }
+  .faq p { color: var(--ink-2); font-size: 15px; line-height: 1.55; padding-bottom: 22px; padding-right: 36px; margin: 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../index.html"><img src="../photos/logo.png" alt=""><span>Durfee</span></a>
+    <div class="nav__links">
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="mass-save-rebates.html">Rebates</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="nav__cta" href="instant-quote.html">Get a quote</a>
+  </div>
+</nav>
+
+<section class="svc-page-hero">
+  <div class="container">
+    <div class="page-hero__breadcrumb">
+      <a href="../index.html">Home</a><span>›</span><a href="services.html">Services</a><span>›</span>Tankless Water Heaters
+    </div>
+    <div class="svc-page-hero__grid">
+      <div>
+        <div class="eyebrow">Endless hot water</div>
+        <h1>Endless hot water,<br><span class="accent">smaller box.</span></h1>
+        <p class="svc-page-hero__lede">Tankless water heaters heat on demand — no storage tank, no standby loss, and you'll never run out mid-shower. We install gas-fired and electric tankless systems.</p>
+        <div class="page-hero__actions">
+          <a class="btn btn--primary" href="instant-quote.html">Get a quote</a>
+          <a class="btn btn--ghost" href="tel:+15086193078">508-619-3078</a>
+        </div>
+        <ul class="svc-page-hero__bullets">
+          <li><strong>On-demand</strong><span>Never runs out</span></li>
+          <li><strong>15–20 yrs</strong><span>Typical lifespan</span></li>
+          <li><strong>Wall-mount</strong><span>Frees up basement floor space</span></li>
+          <li><strong>Recirc-ready</strong><span>Add a pump for instant hot</span></li>
+        </ul>
+      </div>
+      <figure class="svc-page-hero__photo" style="margin:0">
+        <img src="../photos/install-copper.jpg" alt="Tankless water heater install on a Cape Cod basement wall">
+        <figcaption><span><strong>Tankless install</strong></span><small>Gas-fired · Wall mount</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:40px">
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow eyebrow--cyan">Why Tankless</div>
+      <h2>Why tankless wins for most Cape homes.</h2>
+      <p>If you have natural gas and your basement could use the space, tankless is almost always the upgrade.</p>
+    </div>
+    <div class="why-grid">
+      
+      <article class="why-card">
+        <div class="why-card__icon">∞</div>
+        <h3>Endless hot water</h3>
+        <p>Run the dishwasher while taking a shower. The system keeps up.</p>
+      </article>
+      
+      <article class="why-card">
+        <div class="why-card__icon">%</div>
+        <h3>Lower standby loss</h3>
+        <p>Tanks lose heat 24/7. Tankless only heats when you turn the tap.</p>
+      </article>
+      
+      <article class="why-card">
+        <div class="why-card__icon">🪟</div>
+        <h3>Space saver</h3>
+        <p>Wall-mount unit roughly the size of a carry-on suitcase. Reclaim your basement.</p>
+      </article>
+      
+      <article class="why-card">
+        <div class="why-card__icon">⏳</div>
+        <h3>Lasts longer</h3>
+        <p>15–20 years typical vs. 8–12 for a tank. Better cost over its life.</p>
+      </article>
+      
+      <article class="why-card">
+        <div class="why-card__icon">↻</div>
+        <h3>Recirc-compatible</h3>
+        <p>Add a recirculation pump to skip the "waiting for hot" delay.</p>
+      </article>
+      
+      <article class="why-card">
+        <div class="why-card__icon">🛠️</div>
+        <h3>Serviceable</h3>
+        <p>Annual flush keeps performance optimal. We handle the maintenance.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow">How it goes</div>
+      <h2>What a Durfee tankless job looks like.</h2>
+    </div>
+    <div class="steps-grid">
+      
+      <div class="step-card">
+        <div class="step-card__num">STEP 01</div>
+        <h3>Site assessment</h3>
+        <p>We confirm gas service, venting path, water pressure, and electrical.</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-card__num">STEP 02</div>
+        <h3>Sizing</h3>
+        <p>BTU rating sized to peak fixture demand — usually 180k–199k BTU.</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-card__num">STEP 03</div>
+        <h3>Flat-rate quote</h3>
+        <p>Equipment, install, venting, gas line modifications.</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-card__num">STEP 04</div>
+        <h3>Install</h3>
+        <p>Old tank removed, wall bracket mounted, lines run, venting installed.</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-card__num">STEP 05</div>
+        <h3>Commissioning</h3>
+        <p>Pressure test, gas test, temperature calibration.</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-card__num">STEP 06</div>
+        <h3>Maintenance plan</h3>
+        <p>We offer an annual descaling service to keep it running for 20 years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>Common questions, <span class="soft">honest answers.</span></h2>
+    </div>
+    <div class="faq">
+      
+      <details>
+        <summary>Will I notice the difference?<span class="plus">+</span></summary>
+        <p>You'll notice you don't run out of hot water and your basement got bigger. Most people stop thinking about it after a week.</p>
+      </details>
+      
+      <details>
+        <summary>Do I need a bigger gas line?<span class="plus">+</span></summary>
+        <p>Sometimes — tankless heaters draw more BTU at peak than tanks. We check and upsize the line if needed.</p>
+      </details>
+      
+      <details>
+        <summary>What about electric tankless?<span class="plus">+</span></summary>
+        <p>For point-of-use applications, fine. For whole-home, the amperage draw is huge — usually not worth it on Cape Cod homes.</p>
+      </details>
+      
+      <details>
+        <summary>How often do they need service?<span class="plus">+</span></summary>
+        <p>Annual flush to remove mineral buildup. We offer it as part of our maintenance plan.</p>
+      </details>
+      
+      <details>
+        <summary>How long is the install?<span class="plus">+</span></summary>
+        <p>Full day, sometimes 1.5 days if gas or venting needs modification.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section style="text-align:center;padding:clamp(60px,8vw,100px) 0">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center">Ready to scope it out?</div>
+    <h2 style="font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-0.025em;font-weight:600;color:#fff;margin:0 auto 18px;max-width:22ch">Trade the tank for the wall.</h2>
+    <p style="color:var(--ink-2);font-size:18px;margin:0 auto 32px;max-width:46ch;line-height:1.5">We come out, confirm fit, and quote a flat-rate tankless install with a 1-year warranty.</p>
+    <div style="display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a class="btn btn--primary" href="instant-quote.html" style="padding:16px 28px;font-size:17px">Get an instant quote</a>
+      <a class="btn btn--ghost" href="tel:+15086193078" style="padding:16px 28px;font-size:17px">508-619-3078</a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../photos/logo.png" alt=""><strong>Durfee Plumbing &amp; Heating</strong>
+        <span>22 Diamonds Path, Unit 7<br>Dennis, MA 02660<br>Mon–Fri 8a–4:30p</span>
+        <div class="footer__creds"><span>MA Master Plumber</span><span>EPA 608</span><span>Insured</span></div>
+      </div>
+      <div class="footer__col"><h4>Plumbing</h4><ul>
+        <li><a href="water-heater-installation.html">Water heaters</a></li>
+        <li><a href="tankless-water-heaters.html">Tankless</a></li>
+        <li><a href="drain-cleaning.html">Drain cleaning</a></li>
+        <li><a href="gas-line-installation.html">Gas lines</a></li>
+        <li><a href="plumbing-winterization.html">Winterization</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>HVAC</h4><ul>
+        <li><a href="heat-pump-installation.html">Heat pumps</a></li>
+        <li><a href="ductless-mini-split.html">Mini splits</a></li>
+        <li><a href="duct-cleaning.html">Duct cleaning</a></li>
+        <li><a href="mass-save-rebates.html">Mass Save</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Service area</h4><ul>
+        <li><a href="hyannis.html">Hyannis</a></li>
+        <li><a href="yarmouth.html">Yarmouth</a></li>
+        <li><a href="dennis.html">Dennis</a></li>
+        <li><a href="falmouth.html">Falmouth</a></li>
+        <li><a href="service-area.html">All towns</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Company</h4><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:+15086193078">508-619-3078</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2026 Durfee Plumbing &amp; Heating · MA Master Plumber · EPA 608 · Insured</div>
+      <div class="footer__social">
+        <a href="https://www.yelp.com/biz/durfee-plumbing-and-heating-dennis-3" target="_blank" rel="noopener" aria-label="Read our reviews on Yelp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M14.2 11.1l3.6-1.8c.7-.4 1.5.1 1.5.9V13c0 .8-.8 1.3-1.5.9l-3.6-1.8c-.7-.3-.7-1.3 0-1zm-.6 4l3.5 2.5c.6.5.5 1.5-.3 1.7l-2.5.9c-.8.3-1.6-.4-1.5-1.2l.2-3.4c.1-.7.9-1 1.6-.5zm-2.5-3.2l-1-5.6c-.1-.8-.9-1.3-1.7-1l-1.6.6c-.7.3-1 1.2-.6 1.9l2.7 4.9c.4.8 1.6.5 2.2-.8zm.3 1.7c.1.7-.7 1.2-1.4.9l-3.4-1.5c-.8-.3-.8-1.5 0-1.8l3.4-1.5c.7-.3 1.5.2 1.4.9z"/></svg>
+          <span>Yelp</span>
+        </a>
+        <a href="https://www.google.com/search?q=Durfee+Plumbing+%26+Heating+Dennis+MA" target="_blank" rel="noopener" aria-label="Read our reviews on Google">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.6z"/><path d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.7v2.7C4.4 19.8 7.9 22 12 22z" opacity=".85"/><path d="M6.2 13.6c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9V7.1H2.7C2 8.5 1.6 10.2 1.6 12s.4 3.5 1.1 4.9l3.5-2.7z" opacity=".7"/><path d="M12 5.8c1.5 0 2.9.5 4 1.5l3-3C17.2 2.6 14.8 1.6 12 1.6 7.9 1.6 4.4 3.8 2.7 7.1l3.5 2.7c.8-2.5 3.1-4 5.8-4z" opacity=".55"/></svg>
+          <span>Google</span>
+        </a>
+        <a href="https://www.facebook.com/durfeeplumbing/" target="_blank" rel="noopener" aria-label="Durfee Plumbing on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2.2-2H17V2.2C16.6 2.1 15.5 2 14.3 2 11.7 2 10 3.6 10 6.5V10H7v4h3v8h3z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

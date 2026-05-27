@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mass Save Rebates — Durfee Plumbing &amp; Heating</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Up to $10,000 in Mass Save rebates on heat pumps. Durfee files the paperwork end-to-end. EPA-certified, Mass Save participating contractor.">
+<meta name="theme-color" content="#08090c">
+<link rel="stylesheet" href="../css/lighthouse.css">
+<style>
+  .rebate-hero {
+    padding: 160px 0 60px;
+    background:
+      radial-gradient(80% 60% at 80% 20%, rgba(48,209,88,0.22), transparent 55%),
+      radial-gradient(60% 50% at 10% 80%, rgba(41,151,255,0.14), transparent 60%),
+      var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .rebate-hero h1 {
+    font-size: clamp(56px, 9vw, 120px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    font-weight: 600;
+    margin: 0 0 24px;
+    color: #fff;
+  }
+  .rebate-hero h1 .green {
+    background: linear-gradient(180deg, #fff 30%, var(--green) 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .rebate-list {
+    list-style: none; padding: 0; margin: 0;
+    display: grid; gap: 0;
+  }
+  .rebate-list li {
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 200px 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+  }
+  .rebate-list li:last-child { border-bottom: 1px solid var(--line); }
+  .rebate-list strong {
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .rebate-list .label {
+    font-size: 18px;
+    color: var(--ink);
+    font-weight: 500;
+    letter-spacing: -0.005em;
+  }
+  .rebate-list .detail {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 6px;
+    display: block;
+  }
+  .rebate-list .note {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: right;
+    font-weight: 500;
+  }
+  @media (max-width: 720px) {
+    .rebate-list li { grid-template-columns: 1fr; }
+    .rebate-list .note { text-align: left; }
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  @media (max-width: 880px) { .steps { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+  .step {
+    padding: 32px;
+    background: var(--bg);
+  }
+  .step__num {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--green);
+    margin-bottom: 16px;
+  }
+  .step h3 {
+    font-size: 19px; font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #fff; margin: 0 0 8px;
+    line-height: 1.2;
+  }
+  .step p { font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.5; }
+
+  .faq { display: grid; gap: 10px; max-width: 880px; margin: 0 auto; }
+  .faq details {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 4px 24px;
+  }
+  .faq summary {
+    cursor: pointer; list-style: none;
+    font-weight: 500; color: #fff; font-size: 17px;
+    padding: 22px 0;
+    display: flex; justify-content: space-between;
+    gap: 18px; align-items: center;
+    letter-spacing: -0.005em;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary .plus {
+    color: var(--blue); font-size: 22px;
+    transition: transform 180ms;
+    line-height: 1;
+  }
+  .faq details[open] summary .plus { transform: rotate(45deg); }
+  .faq p { color: var(--ink-2); font-size: 15.5px; line-height: 1.55; padding-bottom: 22px; padding-right: 36px; margin: 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../index.html"><img src="../photos/logo.png" alt=""><span>Durfee</span></a>
+    <div class="nav__links">
+      <a href="services.html">Services</a>
+      <a href="mass-save-rebates.html" aria-current="page">Rebates</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="nav__cta" href="instant-quote.html">Get a quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="rebate-hero">
+  <div class="container">
+    <div class="page-hero__breadcrumb">
+      <a href="../index.html">Home</a><span>›</span>Mass Save Rebates
+    </div>
+    <div class="eyebrow eyebrow--green">Mass Save · Participating contractor</div>
+    <h1>Up to <span class="green">$10,000</span><br>back on a heat pump.</h1>
+    <p style="font-size:clamp(18px,1.8vw,22px);color:var(--ink-2);max-width:54ch;margin:0 0 36px;line-height:1.45">
+      Mass Save offers serious incentives for moving off oil and propane. We're an EPA-certified, participating contractor — we handle the qualification, the paperwork, and the inspection so you get the rebate without the hassle.
+    </p>
+    <div class="page-hero__actions">
+      <a class="btn btn--green" href="instant-quote.html">Check your eligibility</a>
+      <a class="btn btn--ghost" href="tel:+15086193078">Talk to us · 508-619-3078</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S COVERED -->
+<section>
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow">What's covered</div>
+      <h2>The numbers, <span class="soft">in writing.</span></h2>
+      <p>Rebates change occasionally. These reflect current Mass Save offerings for whole-home and partial conversions on Cape Cod.</p>
+    </div>
+
+    <ul class="rebate-list">
+      <li>
+        <strong>Up to $10K</strong>
+        <div>
+          <div class="label">Whole-home heat pump</div>
+          <span class="detail">Replace oil, propane, or electric resistance with a cold-climate heat pump as your primary heating system.</span>
+        </div>
+        <span class="note">Cap · Whole-home</span>
+      </li>
+      <li>
+        <strong>$1,250<span style="font-size:0.5em;color:var(--muted);font-weight:500"> /ton</span></strong>
+        <div>
+          <div class="label">Partial home heat pump</div>
+          <span class="detail">Add ductless heat pumps to one or two zones without removing existing heat.</span>
+        </div>
+        <span class="note">Per ton · Partial</span>
+      </li>
+      <li>
+        <strong>$750</strong>
+        <div>
+          <div class="label">Heat-pump water heater</div>
+          <span class="detail">3–4× more efficient than electric resistance. Best fit for unconditioned basements.</span>
+        </div>
+        <span class="note">Equipment rebate</span>
+      </li>
+      <li>
+        <strong>$100<span style="font-size:0.5em;color:var(--muted);font-weight:500"> –$500</span></strong>
+        <div>
+          <div class="label">Insulation &amp; air sealing</div>
+          <span class="detail">A Mass Save Home Energy Assessment uncovers no-cost and low-cost weatherization.</span>
+        </div>
+        <span class="note">Weatherization</span>
+      </li>
+      <li>
+        <strong>0% APR</strong>
+        <div>
+          <div class="label">HEAT Loan financing</div>
+          <span class="detail">Zero-interest financing on qualifying upgrades, up to 7-year terms.</span>
+        </div>
+        <span class="note">Financing</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow eyebrow--cyan">How it works</div>
+      <h2>You don't chase paperwork. <span class="soft">We do.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step__num">STEP 01</div>
+        <h3>Free assessment</h3>
+        <p>We visit, walk the home, and confirm what's eligible — heat pump capacity, ductwork, electrical, water heater.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">STEP 02</div>
+        <h3>Pre-approval</h3>
+        <p>We submit your project to Mass Save and confirm the exact rebate amount before any equipment is ordered.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">STEP 03</div>
+        <h3>Install &amp; inspect</h3>
+        <p>Our crew installs, commissions, and coordinates the inspector visit. You don't take a day off work.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">STEP 04</div>
+        <h3>Rebate paid</h3>
+        <p>Mass Save mails the rebate to you. We file the paperwork — typically 4–8 weeks to arrival.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY HEAT PUMPS -->
+<section style="padding-top:0">
+  <div class="container">
+    <a class="photo-card" href="heat-pump-installation.html" style="min-height:520px">
+      <div class="photo-card__bg"><img src="../photos/fujitsu-minisplit.jpg" alt=""></div>
+      <div class="photo-card__body" style="min-height:520px">
+        <span class="photo-card__tag photo-card__tag--green">The flagship upgrade</span>
+        <h3 style="font-size:clamp(32px,5vw,64px);max-width:14ch">Heat pumps, sized for Cape Cod winters.</h3>
+        <p style="max-width:54ch">Modern cold-climate heat pumps run efficiently down to -15°F. Cool in summer, heat in winter, all from the same outdoor unit. We size them for your home, not a catalog.</p>
+        <span class="arrow">See heat pump installation</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="sect-head" style="margin-inline:auto;text-align:center">
+      <div class="eyebrow" style="justify-content:center">FAQ</div>
+      <h2 style="margin-inline:auto;max-width:20ch">Common questions, <span class="soft">honest answers.</span></h2>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>Do I have to remove my existing heating system to qualify?<span class="plus">+</span></summary>
+        <p>For the whole-home rebate (up to $10,000), yes — your heat pump must be the primary heating system. For the partial-home rebate ($1,250/ton), you can keep existing heat as backup.</p>
+      </details>
+      <details>
+        <summary>How long does the rebate take to arrive?<span class="plus">+</span></summary>
+        <p>Typically 4–8 weeks after the inspector signs off. We file the paperwork as soon as the install is commissioned.</p>
+      </details>
+      <details>
+        <summary>What if I rent out my Cape Cod home seasonally?<span class="plus">+</span></summary>
+        <p>You can still qualify as long as the home is your primary residence or a second home that you (not a corporate entity) own. Investment-grade rentals follow a different track — call us.</p>
+      </details>
+      <details>
+        <summary>Do you also handle the HEAT Loan paperwork?<span class="plus">+</span></summary>
+        <p>Yes. We submit the equipment quote and project details directly to your participating lender. You get a 0% APR loan, we get paid on completion.</p>
+      </details>
+      <details>
+        <summary>What if my electrical panel can't handle a heat pump?<span class="plus">+</span></summary>
+        <p>We'll flag it on the assessment. Mass Save has separate incentives for panel upgrades and electrical work; in many cases we can roll the upgrade into the same project.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE EMBED -->
+<section class="embed-section embed-section--dark" id="quote">
+  <div class="container">
+    <div class="sect-head">
+      <div class="eyebrow eyebrow--green">Start the rebate</div>
+      <h2>Tell us about your home.</h2>
+      <p>Answer a few questions and we'll come back with eligibility, a flat-rate quote, and the expected rebate.</p>
+    </div>
+
+    <div class="embed-card">
+      <!-- DINOQUOTE EMBED SLOT -->
+      <div class="embed-slot" data-embed="dinoquote-rebate">
+        <div class="marker">DinoQuote · rebate eligibility</div>
+        <h3>Widget loads in this card.</h3>
+        <p>Replace this slot with the DinoQuote instant-quote embed. The card is sized so the layout stays stable while the widget initializes.</p>
+        <code>&lt;iframe src="https://app.dinoquote.com/embed/durfee" loading="lazy" style="width:100%;height:900px;border:0"&gt;&lt;/iframe&gt;</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../photos/logo.png" alt=""><strong>Durfee Plumbing &amp; Heating</strong>
+        <span>22 Diamonds Path, Unit 7<br>Dennis, MA 02660<br>Mon–Fri 8a–4:30p</span>
+        <div class="footer__creds"><span>MA Master Plumber</span><span>EPA 608</span><span>Insured</span></div>
+      </div>
+      <div class="footer__col"><h4>Plumbing</h4><ul>
+        <li><a href="water-heater-installation.html">Water heaters</a></li>
+        <li><a href="tankless-water-heaters.html">Tankless</a></li>
+        <li><a href="drain-cleaning.html">Drain cleaning</a></li>
+        <li><a href="gas-line-installation.html">Gas lines</a></li>
+        <li><a href="plumbing-winterization.html">Winterization</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>HVAC</h4><ul>
+        <li><a href="heat-pump-installation.html">Heat pumps</a></li>
+        <li><a href="ductless-mini-split.html">Mini splits</a></li>
+        <li><a href="duct-cleaning.html">Duct cleaning</a></li>
+        <li><a href="mass-save-rebates.html">Mass Save</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Service area</h4><ul>
+        <li><a href="hyannis.html">Hyannis</a></li>
+        <li><a href="yarmouth.html">Yarmouth</a></li>
+        <li><a href="dennis.html">Dennis</a></li>
+        <li><a href="falmouth.html">Falmouth</a></li>
+        <li><a href="service-area.html">All towns</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Company</h4><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:+15086193078">508-619-3078</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2026 Durfee Plumbing &amp; Heating · MA Master Plumber · EPA 608 · Insured</div>
+      <div class="footer__social">
+        <a href="https://www.yelp.com/biz/durfee-plumbing-and-heating-dennis-3" target="_blank" rel="noopener" aria-label="Read our reviews on Yelp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M14.2 11.1l3.6-1.8c.7-.4 1.5.1 1.5.9V13c0 .8-.8 1.3-1.5.9l-3.6-1.8c-.7-.3-.7-1.3 0-1zm-.6 4l3.5 2.5c.6.5.5 1.5-.3 1.7l-2.5.9c-.8.3-1.6-.4-1.5-1.2l.2-3.4c.1-.7.9-1 1.6-.5zm-2.5-3.2l-1-5.6c-.1-.8-.9-1.3-1.7-1l-1.6.6c-.7.3-1 1.2-.6 1.9l2.7 4.9c.4.8 1.6.5 2.2-.8zm.3 1.7c.1.7-.7 1.2-1.4.9l-3.4-1.5c-.8-.3-.8-1.5 0-1.8l3.4-1.5c.7-.3 1.5.2 1.4.9z"/></svg>
+          <span>Yelp</span>
+        </a>
+        <a href="https://www.google.com/search?q=Durfee+Plumbing+%26+Heating+Dennis+MA" target="_blank" rel="noopener" aria-label="Read our reviews on Google">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.6z"/><path d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.7v2.7C4.4 19.8 7.9 22 12 22z" opacity=".85"/><path d="M6.2 13.6c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9V7.1H2.7C2 8.5 1.6 10.2 1.6 12s.4 3.5 1.1 4.9l3.5-2.7z" opacity=".7"/><path d="M12 5.8c1.5 0 2.9.5 4 1.5l3-3C17.2 2.6 14.8 1.6 12 1.6 7.9 1.6 4.4 3.8 2.7 7.1l3.5 2.7c.8-2.5 3.1-4 5.8-4z" opacity=".55"/></svg>
+          <span>Google</span>
+        </a>
+        <a href="https://www.facebook.com/durfeeplumbing/" target="_blank" rel="noopener" aria-label="Durfee Plumbing on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2.2-2H17V2.2C16.6 2.1 15.5 2 14.3 2 11.7 2 10 3.6 10 6.5V10H7v4h3v8h3z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

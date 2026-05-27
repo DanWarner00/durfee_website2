@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/((?!pages|photos|css|favicon).*)", "destination": "/pages/$1.html" }
+  ],
+  "headers": [
+    {
+      "source": "/photos/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    }
+  ]
+}

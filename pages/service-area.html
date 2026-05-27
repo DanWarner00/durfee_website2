@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Service Area — Durfee Plumbing &amp; Heating</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Durfee Plumbing & Heating serves 17+ towns across Cape Cod, plus Plymouth and Wareham. Family-owned, fast response, flat-rate pricing.">
+<meta name="theme-color" content="#08090c">
+<link rel="stylesheet" href="../css/lighthouse.css">
+<style>
+  .town-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 980px) { .town-tiles { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 700px) { .town-tiles { grid-template-columns: repeat(2, 1fr); } }
+  .town-tile {
+    padding: 22px 22px 20px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    display: flex; flex-direction: column; gap: 4px;
+    color: var(--ink);
+    transition: background 150ms, border-color 150ms, transform 200ms;
+  }
+  .town-tile:hover { background: var(--card-hover); border-color: var(--blue); transform: translateY(-2px); text-decoration: none; color: var(--ink); }
+  .town-tile strong { color: #fff; font-size: 17px; font-weight: 600; letter-spacing: -0.005em; }
+  .town-tile span { color: var(--muted); font-size: 11.5px; font-family: var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
+  .region-head {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0 0 16px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../index.html"><img src="../photos/logo.png" alt=""><span>Durfee</span></a>
+    <div class="nav__links">
+      <a href="services.html">Services</a>
+      <a href="mass-save-rebates.html">Rebates</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="nav__cta" href="instant-quote.html">Get a quote</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__breadcrumb"><a href="../index.html">Home</a><span>›</span>Service area</div>
+    <div class="eyebrow eyebrow--cyan">Coverage</div>
+    <h1>17+ towns,<br><span class="accent">one shop.</span></h1>
+    <p class="page-hero__lede">Trucks running daily across Cape Cod, plus Plymouth and Wareham. Family-owned, dispatched from our shop in Dennis.</p>
+    <div class="page-hero__actions">
+      <a class="btn btn--primary" href="instant-quote.html">Confirm we serve your address</a>
+      <a class="btn btn--ghost" href="tel:+15086193078">508-619-3078</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <h3 class="region-head">Upper Cape</h3>
+    <div class="town-tiles">
+      <a class="town-tile" href="bourne.html"><strong>Bourne</strong><span>02532</span></a>
+      <a class="town-tile" href="sandwich.html"><strong>Sandwich</strong><span>02563</span></a>
+      <a class="town-tile" href="falmouth.html"><strong>Falmouth</strong><span>02540</span></a>
+      <a class="town-tile" href="mashpee.html"><strong>Mashpee</strong><span>02649</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:clamp(32px,4vw,48px)">
+  <div class="container">
+    <h3 class="region-head">Mid Cape</h3>
+    <div class="town-tiles">
+      <a class="town-tile" href="barnstable.html"><strong>Barnstable</strong><span>02630</span></a>
+      <a class="town-tile" href="hyannis.html"><strong>Hyannis</strong><span>02601</span></a>
+      <a class="town-tile" href="yarmouth.html"><strong>Yarmouth</strong><span>02664</span></a>
+      <a class="town-tile" href="dennis.html"><strong>Dennis</strong><span>02638</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:clamp(32px,4vw,48px)">
+  <div class="container">
+    <h3 class="region-head">Lower Cape</h3>
+    <div class="town-tiles">
+      <a class="town-tile" href="harwich.html"><strong>Harwich</strong><span>02645</span></a>
+      <a class="town-tile" href="brewster.html"><strong>Brewster</strong><span>02631</span></a>
+      <a class="town-tile" href="chatham.html"><strong>Chatham</strong><span>02633</span></a>
+      <a class="town-tile" href="orleans.html"><strong>Orleans</strong><span>02653</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:clamp(32px,4vw,48px)">
+  <div class="container">
+    <h3 class="region-head">Outer Cape</h3>
+    <div class="town-tiles">
+      <a class="town-tile" href="eastham.html"><strong>Eastham</strong><span>02642</span></a>
+      <a class="town-tile" href="wellfleet.html"><strong>Wellfleet</strong><span>02667</span></a>
+      <a class="town-tile" href="truro.html"><strong>Truro</strong><span>02666</span></a>
+      <a class="town-tile" href="provincetown.html"><strong>Provincetown</strong><span>02657</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:clamp(32px,4vw,48px)">
+  <div class="container">
+    <h3 class="region-head">Off-Cape</h3>
+    <div class="town-tiles" style="grid-template-columns:repeat(2,1fr);max-width:560px">
+      <a class="town-tile" href="plymouth.html"><strong>Plymouth</strong><span>02360 · South Shore</span></a>
+      <a class="town-tile" href="wareham.html"><strong>Wareham</strong><span>02571 · South Coast</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="text-align:center;padding:clamp(60px,8vw,100px) 0">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center">Not sure?</div>
+    <h2 style="font-size:clamp(32px,4.4vw,48px);line-height:1.1;letter-spacing:-0.025em;font-weight:600;color:#fff;margin:0 auto 18px;max-width:22ch">If we don't run there daily, we'll say so.</h2>
+    <p style="color:var(--ink-2);font-size:18px;margin:0 auto 32px;max-width:42ch;line-height:1.5">Emergency dispatch is closest-truck-first. We'll be upfront about ETA before we book.</p>
+    <a class="btn btn--primary" href="contact.html" style="padding:16px 28px;font-size:17px">Confirm we serve your address</a>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../photos/logo.png" alt=""><strong>Durfee Plumbing &amp; Heating</strong>
+        <span>22 Diamonds Path, Unit 7<br>Dennis, MA 02660<br>Mon–Fri 8a–4:30p</span>
+        <div class="footer__creds"><span>MA Master Plumber</span><span>EPA 608</span><span>Insured</span></div>
+      </div>
+      <div class="footer__col"><h4>Plumbing</h4><ul>
+        <li><a href="water-heater-installation.html">Water heaters</a></li>
+        <li><a href="tankless-water-heaters.html">Tankless</a></li>
+        <li><a href="drain-cleaning.html">Drain cleaning</a></li>
+        <li><a href="gas-line-installation.html">Gas lines</a></li>
+        <li><a href="plumbing-winterization.html">Winterization</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>HVAC</h4><ul>
+        <li><a href="heat-pump-installation.html">Heat pumps</a></li>
+        <li><a href="ductless-mini-split.html">Mini splits</a></li>
+        <li><a href="duct-cleaning.html">Duct cleaning</a></li>
+        <li><a href="mass-save-rebates.html">Mass Save</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Service area</h4><ul>
+        <li><a href="hyannis.html">Hyannis</a></li>
+        <li><a href="yarmouth.html">Yarmouth</a></li>
+        <li><a href="dennis.html">Dennis</a></li>
+        <li><a href="falmouth.html">Falmouth</a></li>
+        <li><a href="service-area.html">All towns</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Company</h4><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:+15086193078">508-619-3078</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2026 Durfee Plumbing &amp; Heating · MA Master Plumber · EPA 608 · Insured</div>
+      <div class="footer__social">
+        <a href="https://www.yelp.com/biz/durfee-plumbing-and-heating-dennis-3" target="_blank" rel="noopener" aria-label="Read our reviews on Yelp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M14.2 11.1l3.6-1.8c.7-.4 1.5.1 1.5.9V13c0 .8-.8 1.3-1.5.9l-3.6-1.8c-.7-.3-.7-1.3 0-1zm-.6 4l3.5 2.5c.6.5.5 1.5-.3 1.7l-2.5.9c-.8.3-1.6-.4-1.5-1.2l.2-3.4c.1-.7.9-1 1.6-.5zm-2.5-3.2l-1-5.6c-.1-.8-.9-1.3-1.7-1l-1.6.6c-.7.3-1 1.2-.6 1.9l2.7 4.9c.4.8 1.6.5 2.2-.8zm.3 1.7c.1.7-.7 1.2-1.4.9l-3.4-1.5c-.8-.3-.8-1.5 0-1.8l3.4-1.5c.7-.3 1.5.2 1.4.9z"/></svg><span>Yelp</span>
+        </a>
+        <a href="https://www.google.com/search?q=Durfee+Plumbing+%26+Heating+Dennis+MA" target="_blank" rel="noopener" aria-label="Read our reviews on Google">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.6z"/><path d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.7v2.7C4.4 19.8 7.9 22 12 22z" opacity=".85"/><path d="M6.2 13.6c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9V7.1H2.7C2 8.5 1.6 10.2 1.6 12s.4 3.5 1.1 4.9l3.5-2.7z" opacity=".7"/><path d="M12 5.8c1.5 0 2.9.5 4 1.5l3-3C17.2 2.6 14.8 1.6 12 1.6 7.9 1.6 4.4 3.8 2.7 7.1l3.5 2.7c.8-2.5 3.1-4 5.8-4z" opacity=".55"/></svg><span>Google</span>
+        </a>
+        <a href="https://www.facebook.com/durfeeplumbing/" target="_blank" rel="noopener" aria-label="Durfee Plumbing on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2.2-2H17V2.2C16.6 2.1 15.5 2 14.3 2 11.7 2 10 3.6 10 6.5V10H7v4h3v8h3z"/></svg><span>Facebook</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
